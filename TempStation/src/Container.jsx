@@ -113,7 +113,7 @@ function DefaultWeather() {
           </div>
           <div
             className="weather"
-            style={{ height: "75PX", width: "100PX",color: "black" }}
+            style={{ height: "75PX", width: "100PX",color: "blue" }}
           >
            summer 
           </div>
