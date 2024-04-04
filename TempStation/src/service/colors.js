@@ -7,3 +7,4 @@ const defaultUi = {
     defaulttextcolor : "white"
 
 }
+export default defaultUi ;

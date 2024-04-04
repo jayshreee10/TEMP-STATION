@@ -1,7 +1,11 @@
-// import defaultUi from "./service/colors";
-// import { FiSun } from "react-icons/fi";
+// import { useState } from "react";
+import defaultUi from "./service/colors";
+import { MdOutlineWbSunny } from "react-icons/md";
 
 function DefaultWeather() {
+//  const [station,setStation]= useState("")
+ let station = "";
+
   return (
     <div
       className="defaultUi"
@@ -11,14 +15,25 @@ function DefaultWeather() {
         width: "100vw",
         display: "flex",
         alignItems: "center",
+        flexDirection: "column",
         justifyContent: "space-around",
       }}
     >
+      {/* text-field */}
+      <input
+        type="search"
+        name="places"
+        id="SearchBar"
+        style={{ height: "40px", width: "30vw", backgroundColor: "white",opacity:"53%" ,color:"black"}}
+        onChange={(e)=>{station = e.target.value}}
+      />
+
+      {/* container */}
+
       <div
         className=" container"
         style={{
           backgroundColor: "white",
-          opacity: "53%",
           borderRadius: "40px",
           height: "50vh",
           width: "50vw",
@@ -27,49 +42,80 @@ function DefaultWeather() {
           justifyContent: "space-around",
         }}
       >
-        <div
-          className="data"
-          style={{ height: "300PX", width: "100PX", backgroundColor: "black" }}
-        >
-          <div>SUNRISE</div>
-          <div>SUNSET</div>
-          <div>WIND</div>
-          <div>HUMIDITY</div>
+        {/* data section */}
+        <div className="data" style={{ height: "300PX", width: "100PX" }}>
+          <div
+            style={{
+              height: "30PX",
+              width: "100PX",
+              color: defaultUi.datatextcolor,
+            }}
+          >
+            SUNRISE:
+          </div>
+          <div
+            style={{
+              height: "30PX",
+              width: "100PX",
+              color: defaultUi.datatextcolor,
+            }}
+          >
+            SUNSET
+          </div>
+          <div
+            style={{
+              height: "30PX",
+              width: "100PX",
+              color: defaultUi.datatextcolor,
+            }}
+          >
+            WIND
+          </div>
+          <div
+            style={{
+              height: "30PX",
+              width: "100PX",
+              color: defaultUi.datatextcolor,
+            }}
+          >
+            HUMIDITY
+          </div>
         </div>
         <div
           className="temperature"
-          style={{ height: "350PX", width: "200PX", backgroundColor: "black" }}
+          style={{ height: "350PX", width: "200PX" }}
         >
-          <div className="icon" style={{ height: "100PX", width: "200PX" }}>
-          
-            {/* <FiSun /> */}
+          <div
+            className="icon"
+            style={{ height: "100PX", width: "200PX", color: "black" }}
+          >
+            <MdOutlineWbSunny  style={{ color:"yellow",height:"100px",width:"100px"}}/>
           </div>
           <div
             className="location"
-            style={{ height: "125PX", width: "200PX", fontSize: "30px" }}
+            style={{ height: "100PX", width: "200PX", fontSize: "30px",color:"yellow" }}
           >
-            {" "}
-            ODISHA{" "}
+            ODISHA
           </div>
           <div
             className="temp"
-            style={{ height: "125PX", width: "200PX", fontSize: "50px" }}
+            style={{ height: "125PX", width: "200PX", fontSize: "50px" ,color:"yellow"}}
           >
-            40{" "}
+            40
           </div>
         </div>
         <div className="otherData" style={{ height: "150PX", width: "100PX" }}>
           <div
             className="date"
-            style={{ height: "75PX", width: "100PX", backgroundColor: "black" }}
+            style={{ height: "75PX", width: "100PX",color:"yellow" }}
           >
             date
           </div>
           <div
             className="weather"
-            style={{ height: "75PX", width: "100PX", backgroundColor: "black" }}
+            style={{ height: "75PX", width: "100PX",color: "black" }}
           >
-            weather
+           summer 
           </div>
         </div>
       </div>
