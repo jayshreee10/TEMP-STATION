@@ -1,125 +1,45 @@
-// import { useState } from "react";
-import defaultUi from "./service/colors";
-import { MdOutlineWbSunny } from "react-icons/md";
-
-function DefaultWeather() {
-//  const [station,setStation]= useState("")
- let station = "";
-
+function TempStation() {
   return (
-    <div
-      className="defaultUi"
-      style={{
-        backgroundColor: "#3135F8",
-        height: "100vh",
-        width: "100vw",
-        display: "flex",
-        alignItems: "center",
-        flexDirection: "column",
-        justifyContent: "space-around",
-      }}
-    >
-      {/* text-field */}
-      <input
-        type="search"
-        name="places"
-        id="SearchBar"
-        style={{ height: "40px", width: "30vw", backgroundColor: "white",opacity:"53%" ,color:"black"}}
-        onChange={(e)=>{station = e.target.value}}
-      />
+    <div className="Root">
+      {/* // parent data container */}
+      <div className="Container">
+        {/*  data container box one : card 1 = location + date + time + day ; card 2 = search bar   */}
+        <div className="FirstDataContainer">
+          <div className="Card1"></div>
 
-      {/* container */}
-
-      <div
-        className=" container"
-        style={{
-          backgroundColor: "white",
-          borderRadius: "40px",
-          height: "50vh",
-          width: "50vw",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-around",
-        }}
-      >
-        {/* data section */}
-        <div className="data" style={{ height: "300PX", width: "100PX" }}>
-          <div
-            style={{
-              height: "30PX",
-              width: "100PX",
-              color: defaultUi.datatextcolor,
-            }}
-          >
-            SUNRISE:
-          </div>
-          <div
-            style={{
-              height: "30PX",
-              width: "100PX",
-              color: defaultUi.datatextcolor,
-            }}
-          >
-            SUNSET
-          </div>
-          <div
-            style={{
-              height: "30PX",
-              width: "100PX",
-              color: defaultUi.datatextcolor,
-            }}
-          >
-            WIND
-          </div>
-          <div
-            style={{
-              height: "30PX",
-              width: "100PX",
-              color: defaultUi.datatextcolor,
-            }}
-          >
-            HUMIDITY
+          {/* card 2 = search bar */}
+          <div className="Card2">
+            <input type="search" name="SearchBar" id="SearchBar" />
           </div>
         </div>
-        <div
-          className="temperature"
-          style={{ height: "350PX", width: "200PX" }}
-        >
-          <div
-            className="icon"
-            style={{ height: "100PX", width: "200PX", color: "black" }}
-          >
-            <MdOutlineWbSunny  style={{ color:"yellow",height:"100px",width:"100px"}}/>
-          </div>
-          <div
-            className="location"
-            style={{ height: "100PX", width: "200PX", fontSize: "30px",color:"yellow" }}
-          >
-            ODISHA
-          </div>
-          <div
-            className="temp"
-            style={{ height: "125PX", width: "200PX", fontSize: "50px" ,color:"yellow"}}
-          >
-            40
-          </div>
+
+        {/* data container box two  : card 3 = temp + celcius + weather condition (cloudy/sunny) ; card 4 = weather gif ; card 5 = extra data (feels like + min temp + max temp  )  */}
+        <div className="SecondDataContainer">
+          <div className="Card3"></div>
+          <div className="Card4"></div>
+          <div className="Card5"></div>
         </div>
-        <div className="otherData" style={{ height: "150PX", width: "100PX" }}>
-          <div
-            className="date"
-            style={{ height: "75PX", width: "100PX",color:"yellow" }}
-          >
-            date
+
+        {/* data container box three : card 6,7,8,9,10= extra data (  6: (sunrise + sunset) + 7: pressure + 8: humidity + 9: wind + 10: (sea_level + grnd_level) ) */}
+        <div className="ThirdDataContainer">
+          <div className="Card6">
+            {/* Card 6: (sunrise + sunset) */}
+            <div className="SunShine"></div>
           </div>
-          <div
-            className="weather"
-            style={{ height: "75PX", width: "100PX",color: "blue" }}
-          >
-           summer 
-          </div>
+
+          {/* Card 7: Pressure */}
+          <div className="Card7"> pressure </div>
+
+          {/* Card 8: Humidity */}
+          <div className="Card8"></div>
+
+          {/* Card 9: wind */}
+          <div className="Card9"></div>
+
+          {/* Card 10: sea_level + grnd_level  */}
+          <div className="Card10"></div>
         </div>
       </div>
     </div>
   );
 }
-export default DefaultWeather;
