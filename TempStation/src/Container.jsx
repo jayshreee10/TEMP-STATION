@@ -57,14 +57,14 @@ function TempStation() {
                 width: "75px",
                 height: "35px",
                 marginLeft:"-75px",
-              
+                
               }}
             ></button>
           </div>
         </div>
 
         {/* data container box two  : card 3 = temp + celcius + weather condition (cloudy/sunny) ; card 4 = weather gif ; card 5 = extra data (feels like + min temp + max temp  )  */}
-        <div className="SecondDataContainer">
+        <div className="SecondDataContainer" style={{display:"flex"}}>
           <div className="Card3">
             {/* card 3.1 = temp */}
             <div className="Temperature"> 40 </div>
