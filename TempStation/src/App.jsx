@@ -1,10 +1,10 @@
-import DefaultWeather from "./Container";
+import TempStation from "./Container";
 import './App.css'
 
 function App() {
 
   return (
-  <DefaultWeather/>
+    <TempStation/>
    
   )
    

@@ -1,12 +1,33 @@
 function TempStation() {
   return (
-    <div className="Root">
+    <div
+      className="Root"
+      style={{
+        height: "100vh",
+        width: "100vw",
+        backgroundColor: "aliceblue",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       {/* // parent data container */}
-      <div className="Container">
+      <div
+        className="Container"
+        style={{
+          height: "80vh",
+          width: "90vw",
+          backgroundColor: "#000D49",
+          borderRadius: "30px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection:"column"
+        }}
+      >
         {/*  data container box one : card 1 = location + date + time + day ; card 2 = search bar   */}
         <div className="FirstDataContainer">
-
-        {/* card 1 = location + day + date + time */}
+          {/* card 1 = location + day + date + time */}
           <div className="Card1">
             <div className="loaction"> Odisha </div>
             <div className="day"> today</div>
@@ -15,8 +36,9 @@ function TempStation() {
           </div>
 
           {/* card 2 = search bar */}
-          <div className="Card2">
-            <input type="search" name="SearchBar" id="SearchBar" />
+          <div className="Card2" style={{position:"relative"}}>
+            <input type="search" name="SearchBar" id="SearchBar" placeholder=" Enter City Name"  style={{width:"300px",height:"30px",backgroundColor:"white",color:"black",borderRadius:"6px"}} />
+            <button type="button" style={{backgroundColor:"navy",width:"60px",height:"30px",marginRight:"10px"}}></button>
           </div>
         </div>
 
@@ -67,3 +89,4 @@ function TempStation() {
     </div>
   );
 }
+export default TempStation;
