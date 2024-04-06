@@ -22,7 +22,7 @@ function TempStation() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          flexDirection:"column"
+          flexDirection: "column",
         }}
       >
         {/*  data container box one : card 1 = location + date + time + day ; card 2 = search bar   */}
@@ -36,9 +36,30 @@ function TempStation() {
           </div>
 
           {/* card 2 = search bar */}
-          <div className="Card2" style={{position:"relative"}}>
-            <input type="search" name="SearchBar" id="SearchBar" placeholder=" Enter City Name"  style={{width:"300px",height:"30px",backgroundColor:"white",color:"black",borderRadius:"6px"}} />
-            <button type="button" style={{backgroundColor:"navy",width:"60px",height:"30px",marginRight:"10px"}}></button>
+          <div className="Card2" style={{ position:"absolute" ,width:"50vw"}}>
+            <input
+              type="search"
+              name="SearchBar"
+              id="SearchBar"
+              placeholder=" Enter City Name"
+              style={{
+                width: "300px",
+                height: "35px",
+                backgroundColor: "white",
+                color: "black",
+                borderRadius: "6px",
+              }}
+            />
+            <button
+              type="button"
+              style={{
+                backgroundColor: "navy",
+                width: "75px",
+                height: "35px",
+                marginLeft:"-75px",
+              
+              }}
+            ></button>
           </div>
         </div>
 
