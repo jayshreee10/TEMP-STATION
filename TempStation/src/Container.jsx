@@ -26,9 +26,22 @@ function TempStation() {
         }}
       >
         {/*  data container box one : card 1 = location + date + time + day ; card 2 = search bar   */}
-        <div className="FirstDataContainer">
+        <div
+          className="FirstDataContainer"
+          style={{
+            height: "40vh",
+            width: "85vw",
+            backgroundColor: "yellowgreen",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-evenly",
+          }}
+        >
           {/* card 1 = location + day + date + time */}
-          <div className="Card1">
+          <div
+            className="Card1"
+            style={{ width: "30vw", height: "30vh", backgroundColor: "pink" }}
+          >
             <div className="loaction"> Odisha </div>
             <div className="day"> today</div>
             <div className="date"> 4/5/6</div>
@@ -36,7 +49,17 @@ function TempStation() {
           </div>
 
           {/* card 2 = search bar */}
-          <div className="Card2" style={{ position:"absolute" ,width:"50vw"}}>
+          <div
+            className="Card2"
+            style={{
+              width: "30vw",
+              height: "10vh",
+              backgroundColor: "pink",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
             <input
               type="search"
               name="SearchBar"
@@ -56,15 +79,15 @@ function TempStation() {
                 backgroundColor: "navy",
                 width: "75px",
                 height: "35px",
-                marginLeft:"-75px",
-                
+                marginLeft: "-76px",
+                borderRadius: "7px",
               }}
             ></button>
           </div>
         </div>
 
         {/* data container box two  : card 3 = temp + celcius + weather condition (cloudy/sunny) ; card 4 = weather gif ; card 5 = extra data (feels like + min temp + max temp  )  */}
-        <div className="SecondDataContainer" style={{display:"flex"}}>
+        <div className="SecondDataContainer" style={{ display: "flex" }}>
           <div className="Card3">
             {/* card 3.1 = temp */}
             <div className="Temperature"> 40 </div>
