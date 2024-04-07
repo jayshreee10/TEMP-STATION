@@ -29,24 +29,58 @@ function TempStation() {
         <div
           className="FirstDataContainer"
           style={{
-            height: "40vh",
+            height: "38vh",
             width: "85vw",
+            position:"absolute",
+            top:"11vh",
             backgroundColor: "yellowgreen",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-evenly",
-           
           }}
         >
           {/* card 1 = location + day + date + time */}
           <div
             className="Card1"
-            style={{ width: "30vw", height: "30vh", backgroundColor: "pink",position:"absolute",left:"10vw",display:"flex" }}
+            style={{
+              width: "30vw",
+              height: "30vh",
+              backgroundColor: "pink",
+              position: "absolute",
+              left: "0vw",
+              top:"0",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
           >
-            <div className="loaction"> Odisha </div>
-            <div className="day"> today</div>
-            <div className="date"> 4/5/6</div>
-            <div className="time">3.56AM</div>
+            <div
+              className="loaction"
+              style={{
+                width: "20vw",
+                height: "10vh",
+                backgroundColor: "blue",
+                fontSize: "46px",
+                fontWeight:"400"
+              }}
+            >
+              {" "}
+              Odisha{" "}
+            </div>
+            <div
+              className="locationData"
+              style={{
+                display: "flex",
+                width: "20vw",
+                height: "10vh",
+                backgroundColor: "red",
+              }}
+            >
+              <div className="day">Today | </div>
+              <div className="date"> 4/5/6 |</div>
+              <div className="time"> 3.56AM</div>
+            </div>
           </div>
 
           {/* card 2 = search bar */}
@@ -59,9 +93,9 @@ function TempStation() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              position:"absolute",
-              right:"8vw",
-              top :"25vh"
+              position: "absolute",
+              right: "0",
+              top: "0",
             }}
           >
             <input
@@ -82,16 +116,18 @@ function TempStation() {
               value="Search"
               style={{
                 backgroundColor: "navy",
-                opacity:"80%",
+                opacity: "80%",
                 width: "75px",
                 height: "36px",
                 marginLeft: "-75px",
                 borderRadius: "7px",
-                color:"white",
-                textAlign:"center",
-                fontSize:"12px",
+                color: "white",
+                textAlign: "center",
+                fontSize: "12px",
               }}
-            >Search</button>
+            >
+              Search
+            </button>
           </div>
         </div>
 
