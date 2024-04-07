@@ -20,7 +20,7 @@ function TempStation() {
           backgroundColor: "#000D49",
           borderRadius: "30px",
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "space-evenly",
           alignItems: "center",
           flexDirection: "column",
         }}
@@ -29,10 +29,10 @@ function TempStation() {
         <div
           className="FirstDataContainer"
           style={{
-            height: "38vh",
+            height: "30vh",
             width: "85vw",
-            position:"absolute",
-            top:"11vh",
+            position: "absolute",
+            top: "11vh",
             backgroundColor: "yellowgreen",
             display: "flex",
             alignItems: "center",
@@ -44,11 +44,11 @@ function TempStation() {
             className="Card1"
             style={{
               width: "30vw",
-              height: "30vh",
+              height: "25vh",
               backgroundColor: "pink",
               position: "absolute",
               left: "0vw",
-              top:"0",
+              top: "0",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
@@ -62,7 +62,7 @@ function TempStation() {
                 height: "10vh",
                 backgroundColor: "blue",
                 fontSize: "46px",
-                fontWeight:"400"
+                fontWeight: "400",
               }}
             >
               {" "}
@@ -78,7 +78,7 @@ function TempStation() {
               }}
             >
               <div className="day">Today | </div>
-              <div className="date"> 4/5/6 |</div>
+              <div className="date"> 4/5/6 | </div>
               <div className="time"> 3.56AM</div>
             </div>
           </div>
@@ -89,7 +89,7 @@ function TempStation() {
             style={{
               width: "26vw",
               height: "10vh",
-              backgroundColor: "pink",
+              backgroundColor: "transparent",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -107,6 +107,7 @@ function TempStation() {
                 width: "300px",
                 height: "36px",
                 backgroundColor: "white",
+                opacity:"60%",
                 color: "black",
                 borderRadius: "6px",
               }}
@@ -117,10 +118,10 @@ function TempStation() {
               style={{
                 backgroundColor: "navy",
                 opacity: "80%",
-                width: "75px",
-                height: "36px",
+                width: "73px",
+                height: "34px",
                 marginLeft: "-75px",
-                borderRadius: "7px",
+                borderRadius: "6px",
                 color: "white",
                 textAlign: "center",
                 fontSize: "12px",
@@ -132,7 +133,10 @@ function TempStation() {
         </div>
 
         {/* data container box two  : card 3 = temp + celcius + weather condition (cloudy/sunny) ; card 4 = weather gif ; card 5 = extra data (feels like + min temp + max temp  )  */}
-        <div className="SecondDataContainer" style={{ display: "flex" }}>
+        <div
+          className="SecondDataContainer"
+          style={{ display: "flex", height: "45vh", width: "85vw",backgroundColor:"yellow" }}
+        >
           <div className="Card3">
             {/* card 3.1 = temp */}
             <div className="Temperature"> 40 </div>
