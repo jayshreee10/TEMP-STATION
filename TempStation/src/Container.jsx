@@ -35,12 +35,13 @@ function TempStation() {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-evenly",
+           
           }}
         >
           {/* card 1 = location + day + date + time */}
           <div
             className="Card1"
-            style={{ width: "30vw", height: "30vh", backgroundColor: "pink" }}
+            style={{ width: "30vw", height: "30vh", backgroundColor: "pink",position:"absolute",left:"10vw",display:"flex" }}
           >
             <div className="loaction"> Odisha </div>
             <div className="day"> today</div>
@@ -52,12 +53,15 @@ function TempStation() {
           <div
             className="Card2"
             style={{
-              width: "30vw",
+              width: "26vw",
               height: "10vh",
               backgroundColor: "pink",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              position:"absolute",
+              right:"8vw",
+              top :"25vh"
             }}
           >
             <input
@@ -67,7 +71,7 @@ function TempStation() {
               placeholder=" Enter City Name"
               style={{
                 width: "300px",
-                height: "35px",
+                height: "36px",
                 backgroundColor: "white",
                 color: "black",
                 borderRadius: "6px",
@@ -75,14 +79,19 @@ function TempStation() {
             />
             <button
               type="button"
+              value="Search"
               style={{
                 backgroundColor: "navy",
+                opacity:"80%",
                 width: "75px",
-                height: "35px",
-                marginLeft: "-76px",
+                height: "36px",
+                marginLeft: "-75px",
                 borderRadius: "7px",
+                color:"white",
+                textAlign:"center",
+                fontSize:"12px",
               }}
-            ></button>
+            >Search</button>
           </div>
         </div>
 
