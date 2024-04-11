@@ -47,7 +47,7 @@ function TempStation() {
       };
       console.log(newData);
       setData(newData);
-      setError(false)
+      setError(false);
     } else {
       setError(true);
     }
@@ -69,7 +69,7 @@ function TempStation() {
         className="Container"
         style={{
           height: "80vh",
-          width: "90vw",
+          width: "75vw",
           backgroundColor: "#000D49",
           borderRadius: "30px",
           display: "flex",
@@ -83,7 +83,7 @@ function TempStation() {
           className="FirstDataContainer"
           style={{
             height: "25vh",
-            width: "85vw",
+            width: "75vw",
             position: "absolute",
             top: "11vh",
             // backgroundColor: "yellowgreen",
@@ -99,14 +99,14 @@ function TempStation() {
           <div
             className="Card2"
             style={{
-              width: "26vw",
+              width: "35vw",
               height: "10vh",
-              backgroundColor: "transparent",
+              // backgroundColor: "black",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               position: "absolute",
-              right: "0",
+              right: "0vw",
               top: "0",
             }}
           >
@@ -116,26 +116,30 @@ function TempStation() {
               id="SearchBar"
               placeholder="Enter City Name"
               style={{
-                width: "300px",
-                height: "36px",
+                width: "20vw",
+                height: "4.8vh",
                 backgroundColor: "white",
                 opacity: "60%",
+                paddingLeft: "12px",
+                paddingRight :"5px",
+                border: "none",
                 color: "black",
-                borderRadius: "6px",
+                borderRadius: "4px",
               }}
               onChange={(e) => {
                 inputLocation = e.target.value;
               }}
             />
+
             <button
               type="button"
               value="Search"
               style={{
                 backgroundColor: "navy",
                 opacity: "80%",
-                width: "73px",
-                height: "36px",
-                marginLeft: "5px",
+                width: "6vw",
+                height: "5vh",
+                marginLeft: "1vw",
                 borderRadius: "6px",
                 color: "white",
                 textAlign: "center",
@@ -197,7 +201,7 @@ function TempStation() {
             // backgroundColor: "red",
           }}
         >
-          <OtherData data = {data}/>
+          <OtherData data={data} />
         </div>
       </div>
     </div>

@@ -6,9 +6,9 @@ function Location(props) {
     <div
       className="Card1"
       style={{
-        width: "25vw",
-        height: "20vh",
-        // backgroundColor: "transparent",
+        width: "20vw",
+        height: "25vh",
+        // backgroundColor: "black",
         position: "absolute",
         left: "0vw",
         top: "0",
