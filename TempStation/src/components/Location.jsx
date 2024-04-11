@@ -45,10 +45,10 @@ function Location(props) {
         }}
       >
         <div className="day">
-          <b>{data.day}</b> |
+          <b>{data.day}</b> 
         </div>
         <div className="date">
-          <b>{data.date}</b> |
+          <b>{data.date}</b> 
         </div>
         <div className="time">
           <b>{data.time}</b>

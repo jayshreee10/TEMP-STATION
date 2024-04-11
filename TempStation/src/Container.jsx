@@ -178,7 +178,7 @@ function TempStation() {
               // backgroundColor: "brown",
             }}
           >
-            gif url
+            gif
           </div>
 
           {/* card 5 = extra data (feels like + min temp + max temp  )   */}
