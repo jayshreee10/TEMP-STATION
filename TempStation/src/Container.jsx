@@ -182,7 +182,7 @@ function TempStation() {
               // backgroundColor: "brown",
             }}
           >
-            gif
+            {/* <img src="src/assets/sunset-sun.gif" alt="" srcset="" height={"20vh"} width={"30vw"} />            */}
           </div>
 
           {/* card 5 = extra data (feels like + min temp + max temp  )   */}
@@ -197,7 +197,7 @@ function TempStation() {
             alignItems: "center",
             justifyContent: "space-around",
             height: "25vh",
-            width: "85vw",
+            width: "75vw",
             // backgroundColor: "red",
           }}
         >

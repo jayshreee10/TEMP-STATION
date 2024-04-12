@@ -9,7 +9,7 @@ function OtherData(props) {
         style={{
           height: "22vh",
           width: "15vw",
-        //   backgroundColor: "black",
+          // backgroundColor: "black",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -18,7 +18,10 @@ function OtherData(props) {
         }}
       >
         {/* Card 6: (sunrise + sunset) */}
-        <div className="SunShine">image</div>
+        <div className="SunShine">
+        <img src="src/assets/sunset-sun.gif" alt="" srcset="" height={"80vh"} width={"80vw"} />           
+
+        </div>
         <div className="sunrise">
           {data.sunrise != "" ? `Sunrise : ${data.sunrise}` : ""}
         </div>
@@ -31,7 +34,7 @@ function OtherData(props) {
         style={{
           height: "22vh",
           width: "15vw",
-        //   backgroundColor: "black",
+          // backgroundColor: "black",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -75,7 +78,10 @@ function OtherData(props) {
           flexDirection: "column",
         }}
       >
-        <div className="wind">image</div>
+        <div className="wind">
+        <img src="src/assets/wind.gif" alt="" srcset="" height={"60vh"} width={"100vw"} />           
+
+        </div>
         <div className="wind">
           {data.wind != "" ? ` wind : ${data.wind}` : ""}
         </div>

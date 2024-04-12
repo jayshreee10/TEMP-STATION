@@ -11,7 +11,7 @@ function MaxMinTemp(props) {
         alignItems: "center",
         justifyContent: "center",
         position: "absolute",
-        right: "7.5vw",
+        right: "12.5vw",
         top: "40vh",
         height: "16vh",
         width: "15vw",
