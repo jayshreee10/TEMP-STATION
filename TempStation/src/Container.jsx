@@ -7,9 +7,9 @@ import OtherData from "./components/OtherData";
 function TempStation() {
   let defaultData = {
     location: "",
-    day: "",
-    date: "",
-    time: "",
+    // day: "",
+    // date: "",
+    // time: "",
     temperature: "",
     humidity: "",
     wind: "",

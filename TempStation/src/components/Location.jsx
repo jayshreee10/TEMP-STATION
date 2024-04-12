@@ -1,5 +1,5 @@
 import React from "react";
-
+// import date from from "./service/time" ;
 function Location(props) {
   const data = props.data
   return (
@@ -44,8 +44,8 @@ function Location(props) {
           justifyContent: "space-evenly",
         }}
       >
-        <div className="day">
-          <b>{data.day}</b> 
+        <div className="day" onChange={()=>{ date(today)}}>
+         
         </div>
         <div className="date">
           <b>{data.date}</b> 

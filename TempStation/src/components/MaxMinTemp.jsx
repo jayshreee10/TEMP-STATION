@@ -9,20 +9,20 @@ function MaxMinTemp(props) {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "space-around",
         position: "absolute",
         right: "12.5vw",
         top: "40vh",
-        height: "16vh",
+        height: "13vh",
         width: "16vw",
         fontSize:"12px",
-        fontWeight:"bold"
+        fontWeight:"bold",
         // backgroundColor: "red",
       }}
     >
       <div className="FeelsLike">
       {data.feelsLike != "" ? <div style={{display:"flex" , justifyContent:"space-around"}}>
-          <img src="src\assets\thermometer_.png" height={"15px"} width={"15px"}  style={{marginRight:"6px"}} /> 
+          <img src="src\assets\thermometer_.png" height={"15px"} width={"15px"}  style={{marginRight:"5px",paddingRight:"7px"}} /> 
           Feels like : {data.feelsLike}° C 
         </div> : " "}
       </div>
