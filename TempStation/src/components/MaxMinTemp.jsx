@@ -14,19 +14,35 @@ function MaxMinTemp(props) {
         right: "12.5vw",
         top: "40vh",
         height: "16vh",
-        width: "15vw",
-        fontSize:"15px"
+        width: "16vw",
+        fontSize:"12px",
+        fontWeight:"bold"
         // backgroundColor: "red",
       }}
     >
       <div className="FeelsLike">
-        {data.feelsLike != "" ? `Feels like : ${data.feelsLike}° C` : " "}
+      {data.feelsLike != "" ? <div style={{display:"flex" , justifyContent:"space-around"}}>
+          <img src="src\assets\thermometer_.png" height={"15px"} width={"15px"}  style={{marginRight:"6px"}} /> 
+          Feels like : {data.feelsLike}° C 
+        </div> : " "}
       </div>
+
       <div className="MinTemp">
-        {data.minTemp != "" ? `MinTemp : ${data.minTemp}° C` : " "}
+        {data.minTemp != "" ? 
+        <div style={{display:"flex"}}>
+          <img src="src\assets\thermometer-loss_.png" height={"20px"} width={"20px"} style={{marginRight:"2px"}}  /> 
+          
+        MinTemp : {data.minTemp}° C 
+        </div> : " "}
+ 
       </div>
+
       <div className="MaxTemp">
-        {data.maxTemp != "" ? `MaxTemp : ${data.maxTemp}° C` : ""}
+      {data.maxTemp != "" ? <div  style={{display:"flex"}}>
+        <img src="src\assets\thermometer-gain-rounded_.png " height={"20px"} width={"20px"} style={{marginRight:"2px" , border:"2px"}}  /> 
+        MaxTemp : {data.maxTemp}° C
+        </div> : ""}
+        
       </div>
     </div>
   );
