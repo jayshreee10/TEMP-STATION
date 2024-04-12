@@ -25,13 +25,16 @@ function TempStation() {
   };
   const [data, setData] = useState(defaultData);
   const [error, setError] = useState(false);
-  let inputLocation = "";
+  const [inputLocation , setInputLocation] = useState("");
+
   async function callApi() {
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${inputLocation}&appid=7d3a506953bf739eb497cd7257dfe861&units=metric`
     );
-    if (response.status == 200) {
+    if (response.status == 200 ) {
+    
       const apiData = await response.json();
+      console.log(apiData)
       let newData = {
         temperature: apiData.main.temp,
         location: apiData.name,
@@ -45,10 +48,10 @@ function TempStation() {
         sunset: apiData.sys.sunset,
         weatherCondition: apiData.weather[0].description,
       };
-      console.log(newData);
       setData(newData);
-      setError(false);
-    } else {
+      setError(false); 
+    } 
+    else {
       setError(true);
     }
   }
@@ -127,7 +130,7 @@ function TempStation() {
                 borderRadius: "4px",
               }}
               onChange={(e) => {
-                inputLocation = e.target.value;
+                setInputLocation( e.target.value) ;
               }}
             />
 

@@ -15,17 +15,18 @@ function MaxMinTemp(props) {
         top: "40vh",
         height: "16vh",
         width: "15vw",
+        fontSize:"15px"
         // backgroundColor: "red",
       }}
     >
       <div className="FeelsLike">
-        {data.feelsLike != "" ? `Feels like : ${data.feelsLike}` : " "}
+        {data.feelsLike != "" ? `Feels like : ${data.feelsLike}° C` : " "}
       </div>
       <div className="MinTemp">
-        {data.minTemp != "" ? `MinTemp : ${data.minTemp}` : " "}
+        {data.minTemp != "" ? `MinTemp : ${data.minTemp}° C` : " "}
       </div>
       <div className="MaxTemp">
-        {data.maxTemp != "" ? `maxTemp : ${data.maxTemp}` : ""}
+        {data.maxTemp != "" ? `MaxTemp : ${data.maxTemp}° C` : ""}
       </div>
     </div>
   );

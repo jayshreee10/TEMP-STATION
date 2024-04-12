@@ -1,5 +1,5 @@
 import React from "react";
-
+import epochConverter from "../service/time";
 function OtherData(props) {
   const data = props.data;
   return (
@@ -8,8 +8,9 @@ function OtherData(props) {
         className="Card6"
         style={{
           height: "22vh",
-          width: "15vw",
-          // backgroundColor: "black",
+          width: "13vw",
+          backgroundColor: "#111F55",
+          borderRadius:"20px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -23,18 +24,19 @@ function OtherData(props) {
 
         </div>
         <div className="sunrise">
-          {data.sunrise != "" ? `Sunrise : ${data.sunrise}` : ""}
+          {data.sunrise != "" ? `Sunrise : ${epochConverter(data.sunrise)}` : ""}
         </div>
         <div className="sunset">
-          {data.sunset != "" ? `Sunset : ${data.sunset}` : ""}
+          {data.sunset != "" ? `Sunset : ${epochConverter(data.sunset)}` : ""}
         </div>
       </div>
       <div
         className="Card7"
         style={{
           height: "22vh",
-          width: "15vw",
-          // backgroundColor: "black",
+          width: "13vw",
+          backgroundColor: "#111F55",
+          borderRadius:"20px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -42,7 +44,9 @@ function OtherData(props) {
           flexDirection: "column",
         }}
       >
-        <div className="pressure">image</div>
+        <div className="pressure">
+        <img src="src/assets/pressure.gif" alt="" srcset="" height={"60vh"} width={"100vw"} />
+        </div>
         <div className="pressure">
           {data.pressure != "" ? `Pressure : ${data.pressure}` : ""}
         </div>
@@ -51,8 +55,9 @@ function OtherData(props) {
         className="Card8"
         style={{
           height: "22vh",
-          width: "15vw",
-        //   backgroundColor: "black",
+          width: "13vw",
+          backgroundColor: "#111F55",
+          borderRadius:"20px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -69,8 +74,9 @@ function OtherData(props) {
         className="Card9"
         style={{
           height: "22vh",
-          width: "15vw",
-        //   backgroundColor: "black",
+          width: "13vw",
+          backgroundColor: "#111F55",
+          borderRadius:"20px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -79,7 +85,7 @@ function OtherData(props) {
         }}
       >
         <div className="wind">
-        <img src="src/assets/wind.gif" alt="" srcset="" height={"60vh"} width={"100vw"} />           
+                  
 
         </div>
         <div className="wind">
@@ -90,8 +96,9 @@ function OtherData(props) {
         className="Card10"
         style={{
           height: "22vh",
-          width: "15vw",
-        //   backgroundColor: "black",
+          width: "13vw",
+          backgroundColor: "#111F55",
+          borderRadius:"20px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
