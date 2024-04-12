@@ -15,34 +15,57 @@ function MaxMinTemp(props) {
         top: "40vh",
         height: "13vh",
         width: "16vw",
-        fontSize:"12px",
-        fontWeight:"bold",
+        fontSize: "12px",
+        fontWeight: "bold",
         // backgroundColor: "red",
       }}
     >
       <div className="FeelsLike">
-      {data.feelsLike != "" ? <div style={{display:"flex" , justifyContent:"space-around"}}>
-          <img src="src\assets\thermometer_.png" height={"15px"} width={"15px"}  style={{marginRight:"5px",paddingRight:"7px"}} /> 
-          Feels like : {data.feelsLike}° C 
-        </div> : " "}
+        {data.feelsLike != "" ? (
+          <div style={{ display: "flex", justifyContent: "space-around" }}>
+            <img
+              src="src\assets\thermometer_.png"
+              height={"15px"}
+              width={"15px"}
+              style={{ paddingRight: "9px" }}
+            />
+            Feels like : {data.feelsLike}° C
+          </div>
+        ) : (
+          " "
+        )}
       </div>
 
       <div className="MinTemp">
-        {data.minTemp != "" ? 
-        <div style={{display:"flex"}}>
-          <img src="src\assets\thermometer-loss_.png" height={"20px"} width={"20px"} style={{marginRight:"2px"}}  /> 
-          
-        MinTemp : {data.minTemp}° C 
-        </div> : " "}
- 
+        {data.minTemp != "" ? (
+          <div style={{ display: "flex" }}>
+            <img
+              src="src\assets\thermometer-loss_.png"
+              height={"20px"}
+              width={"20px"}
+              style={{ paddingRight: "7px" }}
+            />
+            MinTemp : {data.minTemp}° C
+          </div>
+        ) : (
+          " "
+        )}
       </div>
 
       <div className="MaxTemp">
-      {data.maxTemp != "" ? <div  style={{display:"flex"}}>
-        <img src="src\assets\thermometer-gain-rounded_.png " height={"20px"} width={"20px"} style={{marginRight:"2px" , border:"2px"}}  /> 
-        MaxTemp : {data.maxTemp}° C
-        </div> : ""}
-        
+        {data.maxTemp != "" ? (
+          <div style={{ display: "flex" }}>
+            <img
+              src="src\assets\thermometer-gain-rounded_.png "
+              height={"20px"}
+              width={"20px"}
+              style={{ paddingRight: "7px" }}
+            />
+            MaxTemp : {data.maxTemp}° C
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

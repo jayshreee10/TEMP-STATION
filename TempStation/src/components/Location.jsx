@@ -65,7 +65,7 @@ function Location(props) {
         </div>
         {data.location != "" ? (
           <div className="time">
-            <b>{time}</b>
+            <b>{time} (IST)</b>
           </div>
         ) : (
           ""
