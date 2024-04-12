@@ -45,7 +45,7 @@ function OtherData(props) {
         }}
       >
         <div className="pressure">
-        <img src="src/assets/pressure.gif" alt="" srcset="" height={"60vh"} width={"100vw"} />
+        <img src="src/assets/pressure.gif" alt="" srcset="" height={"70vh"} width={"100vw"} />
         </div>
         <div className="pressure">
           {data.pressure != "" ? `Pressure : ${data.pressure}` : ""}
@@ -108,10 +108,10 @@ function OtherData(props) {
       >
         <div className="Levels">image</div>
         <div className="seaLevel">
-          {data.seaLevel != "" ? `  seaLevel : ${data.seaLevel}` : ""}
+          {data.longitude != "" ? `  longitude : ${data.longitude}` : ""}
         </div>
         <div className="grndLevel">
-          {data.grndLevel != "" ? `  grndLevel : ${data.grndLevel}` : ""}
+          {data.latitude != "" ? ` latitude : ${data.latitude}` : ""}
         </div>
       </div>
     </>

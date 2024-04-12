@@ -20,8 +20,8 @@ function TempStation() {
     maxTemp: "",
     sunrise: "",
     sunset: "",
-    seaLevel: "",
-    grndLevel: "",
+    longitude :  "",
+    latitude: "",
   };
   const [data, setData] = useState(defaultData);
   const [error, setError] = useState(false);
@@ -47,6 +47,8 @@ function TempStation() {
         sunrise: apiData.sys.sunrise,
         sunset: apiData.sys.sunset,
         weatherCondition: apiData.weather[0].description,
+        longitude : apiData.coord.lon,
+        latitude : apiData.coord.lat ,
       };
       setData(newData);
       setError(false); 
