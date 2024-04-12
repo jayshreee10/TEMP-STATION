@@ -1,7 +1,22 @@
 import React from "react";
+import { useState } from "react";
 // import date from from "./service/time" ;
 function Location(props) {
-  const data = props.data
+  // function getDate() {
+  //   return new Date().getDate;
+  // }
+  // const [date, setDate] = useState(getDate());
+  // setDate(getDate())
+
+  function getTime() {
+    return new Date().toLocaleTimeString();
+  }
+  const [time, setTime] = useState(getTime());
+  setInterval(() => {
+    setTime(getTime());
+  }, 1000);
+
+  const data = props.data;
   return (
     <div
       className="Card1"
@@ -40,19 +55,21 @@ function Location(props) {
           height: "7vh",
           // backgroundColor: "red",
           display: "flex",
-          alignItems: "center",
+         textAlign :"center",
           justifyContent: "space-evenly",
         }}
       >
-        <div className="day" onChange={()=>{ date(today)}}>
-         
-        </div>
+        <div className="day">{/* {()=>{setDate(getDate)} } */}</div>
         <div className="date">
-          <b>{data.date}</b> 
+          {/* <b>{date}</b> */}
         </div>
-        <div className="time">
-          <b>{data.time}</b>
-        </div>
+        {data.location != "" ? (
+          <div className="time">
+            <b>{time}</b>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
