@@ -3,20 +3,11 @@ import Location from "./components/Location";
 import Temperature from "./components/Temperature";
 import MaxMinTemp from "./components/MaxMinTemp";
 import OtherData from "./components/OtherData";
-import Lottie from "lottie-react";
-import cloud from "./assets/lottie/cloud.json";
-import clear from "./assets/lottie/clear.json";
-import rain from "./assets/lottie/rain.json";
-import drizzle from "./assets/lottie/drizzle.json";
-import mist from "./assets/lottie/mist.json";
-
+import CallLottie from "./components/Lottie" ;
 
 function TempStation() {
   let defaultData = {
     location: "",
-    // day: "",
-    // date: "",
-    // time: "",
     temperature: "",
     humidity: "",
     wind: "",
@@ -54,7 +45,7 @@ function TempStation() {
         sunrise: apiData.sys.sunrise,
         sunset: apiData.sys.sunset,
         weatherCondition: apiData.weather[0].description,
-        lottie = apiData.weather[0].main,
+        lottie : apiData.weather[0].main,
         longitude : apiData.coord.lon,
         latitude : apiData.coord.lat ,
       };
@@ -64,7 +55,8 @@ function TempStation() {
     else {
       setError(true);
     }
-  }
+    }
+
   return (
     <div
       className="Root"
@@ -195,12 +187,7 @@ function TempStation() {
               // backgroundColor: "brown",
             }}
           >
-            if(te)
-           <Lottie animationData={clear} style={{height:"23vh",width:"20vw"}}/>         
-           {/* <Lottie animationData={cloud} style={{height:"35vh",width:"35vw"}}/>          */}
-           {/* <Lottie animationData={rain} style={{height:"25vh",width:"25vw",marginTop:"20px"}}/>          */}
-           {/* <Lottie animationData={drizzle} style={{height:"35vh",width:"35vw"}}/>    */}
-           {/* <Lottie animationData={mist} style={{height:"35vh",width:"35vw"}}/>    */}
+            <CallLottie data={data} />
 
           </div>
 

@@ -9,12 +9,12 @@ function Location(props) {
   // setDate(getDate())
 
   function getTime() {
-    return new Date().toLocaleTimeString();
+    return new Date().toUTCString();
   }
   const [time, setTime] = useState(getTime());
   setInterval(() => {
     setTime(getTime());
-  }, 1000);
+  });
 
   const data = props.data;
   return (
@@ -25,25 +25,25 @@ function Location(props) {
         height: "25vh",
         // backgroundColor: "black",
         position: "absolute",
-        left: "0vw",
+        left: "5vw",
         top: "0",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
+        // justifyContent: "center",
+        // alignItems: "center",
       }}
     >
       <div
         className="loaction"
         style={{
-          width: "15vw",
+          width: "25vw",
           height: "10vh",
           // backgroundColor: "blue",
           fontSize: "46px",
           fontWeight: "400",
           display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          // alignItems: "center",
+          // justifyContent: "center",
         }}
       >
         {data.location}
@@ -51,21 +51,20 @@ function Location(props) {
       <div
         className="locationData"
         style={{
-          width: "15vw",
+          width: "10vw",
           height: "7vh",
           // backgroundColor: "red",
           display: "flex",
-         textAlign :"center",
-          justifyContent: "space-evenly",
+          // textAlign :"center",
+          
+          // justifyContent: "space-evenly",
         }}
       >
-        <div className="day">{/* {()=>{setDate(getDate)} } */}</div>
-        <div className="date">
-          {/* <b>{date}</b> */}
-        </div>
+       
+       
         {data.location != "" ? (
           <div className="time">
-            <b>{time} (IST)</b>
+            <b>{time}</b>
           </div>
         ) : (
           ""

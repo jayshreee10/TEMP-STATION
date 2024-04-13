@@ -45,7 +45,7 @@ function Temperature(props) {
           fontSize: "20px",
         }}
       >
-        {data.weatherCondition}
+       <b>{data.weatherCondition}</b> 
       </div>
     </div>
   );
