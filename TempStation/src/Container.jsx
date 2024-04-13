@@ -3,7 +3,8 @@ import Location from "./components/Location";
 import Temperature from "./components/Temperature";
 import MaxMinTemp from "./components/MaxMinTemp";
 import OtherData from "./components/OtherData";
-
+import Lottie from "lottie-react";
+import clear from "./assets/lottie"
 function TempStation() {
   let defaultData = {
     location: "",
@@ -184,10 +185,11 @@ function TempStation() {
               top: "36vh",
               height: "25vh",
               width: "25vw",
-              // backgroundColor: "brown",
+              backgroundColor: "brown",
             }}
           >
-            {/* <img src="src/assets/sunset-sun.gif" alt="" srcset="" height={"20vh"} width={"30vw"} />            */}
+            {clear}
+           {/* <Lottie animationData={clear}/>          */}
           </div>
 
           {/* card 5 = extra data (feels like + min temp + max temp  )   */}
