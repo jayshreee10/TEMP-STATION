@@ -30,6 +30,8 @@ function OtherData(props) {
           {data.sunset != "" ? `Sunset : ${epochConverter(data.sunset)}` : ""}
         </div>
       </div>
+          
+      
       <div
         className="Card7"
         style={{

@@ -23,13 +23,28 @@ function MaxMinTemp(props) {
       <div className="FeelsLike">
         {data.feelsLike != "" ? (
           <div style={{ display: "flex", justifyContent: "space-around" }}>
-            <img
-              src="src\assets\thermometer_.png"
-              height={"15px"}
-              width={"15px"}
-              style={{ paddingRight: "9px" }}
-            />
+            <div style={{ marginRight: "0px" }}>
+              <img
+                src="src\assets\thermometer_.png"
+                height={"16px"}
+                width={"17px"}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              />
+            </div>
+            <div
+              style={{
+                width: "8vw",
+                // backgroundColor: "black",
+                marginLeft: "5px",
+              }}
+            >
             Feels like : {data.feelsLike}° C
+
+          </div>
           </div>
         ) : (
           " "
@@ -39,13 +54,27 @@ function MaxMinTemp(props) {
       <div className="MinTemp">
         {data.minTemp != "" ? (
           <div style={{ display: "flex" }}>
-            <img
-              src="src\assets\thermometer-loss_.png"
-              height={"20px"}
-              width={"20px"}
-              style={{ paddingRight: "7px" }}
-            />
-            MinTemp : {data.minTemp}° C
+            <div style={{ marginRight: "0px" }}>
+              <img
+                src="src\assets\thermometer-loss_.png"
+                height={"20px"}
+                width={"20px"}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              />
+            </div>
+            <div
+              style={{
+                width: "8vw",
+                // backgroundColor: "black",
+                marginLeft: "5px",
+              }}
+            >
+              MinTemp : {data.minTemp}° C
+            </div>
           </div>
         ) : (
           " "
@@ -55,13 +84,28 @@ function MaxMinTemp(props) {
       <div className="MaxTemp">
         {data.maxTemp != "" ? (
           <div style={{ display: "flex" }}>
-            <img
-              src="src\assets\thermometer-gain-rounded_.png "
-              height={"20px"}
-              width={"20px"}
-              style={{ paddingRight: "7px" }}
-            />
-            MaxTemp : {data.maxTemp}° C
+            <div style={{ marginRight: "0px" }}>
+              <img
+                src="src\assets\thermometer-gain-rounded_.png "
+                height={"20px"}
+                width={"20px"}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              />
+            </div>
+            <div
+              style={{
+                width: "8vw",
+                // backgroundColor: "black",
+                marginLeft: "5px",
+              }}
+            >
+              {" "}
+              MaxTemp : {data.maxTemp}° C{" "}
+            </div>
           </div>
         ) : (
           ""
