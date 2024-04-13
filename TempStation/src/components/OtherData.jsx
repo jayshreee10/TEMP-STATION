@@ -1,5 +1,11 @@
 import React from "react";
 import epochConverter from "../service/time";
+import Lottie from "lottie-react";
+import humidity from "../assets/lottie/humidity.json";
+import Pressure from "../assets/lottie/pressure.json";
+import wind from "../assets/lottie/wind.json";
+import latlon from "../assets/lottie/latlon.json";
+
 function OtherData(props) {
   const data = props.data;
   return (
@@ -10,7 +16,7 @@ function OtherData(props) {
           height: "22vh",
           width: "13vw",
           backgroundColor: "#111F55",
-          borderRadius:"20px",
+          borderRadius: "20px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -20,25 +26,31 @@ function OtherData(props) {
       >
         {/* Card 6: (sunrise + sunset) */}
         <div className="SunShine">
-        <img src="src/assets/sunset-sun.gif" alt="" srcset="" height={"80vh"} width={"80vw"} />           
-
+          <img
+            src="src/assets/sunset-sun.gif"
+            alt=""
+            srcset=""
+            height={"85vh"}
+            width={"85vw"}
+          />
         </div>
         <div className="sunrise">
-          {data.sunrise != "" ? `Sunrise : ${epochConverter(data.sunrise)}` : ""}
+          {data.sunrise != ""
+            ? <b>Sunrise : {epochConverter(data.sunrise)}</b>
+            : ""}
         </div>
         <div className="sunset">
-          {data.sunset != "" ? `Sunset : ${epochConverter(data.sunset)}` : ""}
+          {data.sunset != "" ? <b>Sunset : {epochConverter(data.sunset)}</b> : ""}
         </div>
       </div>
-          
-      
+
       <div
         className="Card7"
         style={{
           height: "22vh",
           width: "13vw",
           backgroundColor: "#111F55",
-          borderRadius:"20px",
+          borderRadius: "20px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -47,10 +59,15 @@ function OtherData(props) {
         }}
       >
         <div className="pressure">
-        <img src="src/assets/pressure.gif" alt="" srcset="" height={"70vh"} width={"100vw"} />
+          <Lottie
+            animationData={Pressure}
+            style={{ height: "10vh", width: "8vw" }}
+          />
+
+          {/* <img src="src/assets/pressure.gif" alt="" srcset="" height={"70vh"} width={"100vw"} /> */}
         </div>
-        <div className="pressure">
-          {data.pressure != "" ? `Pressure : ${data.pressure}` : ""}
+        <div className="pressure" style={{marginTop:"10px"}}>
+          {data.pressure != "" ? <b>Pressure : {data.pressure}hPa</b> : ""}
         </div>
       </div>
       <div
@@ -59,17 +76,22 @@ function OtherData(props) {
           height: "22vh",
           width: "13vw",
           backgroundColor: "#111F55",
-          borderRadius:"20px",
+          borderRadius: "20px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           fontSize: "15px",
           flexDirection: "column",
+          
         }}
       >
-        <div className="humidity">image</div>
-        <div className="humidity">
-          {data.humidity != "" ? `humidity : ${data.humidity}` : ""}
+        
+        <div className="humidity" > <Lottie
+          animationData={humidity}
+          style={{ height: "18vh", width: "10vw",marginTop:"-35px" }}
+        /> </div>
+        <div className="humidity" style={{marginTop:"-16px"}}>
+          {data.humidity != "" ? <b>humidity : {data.humidity}%</b>  : ""}
         </div>
       </div>
       <div
@@ -78,7 +100,7 @@ function OtherData(props) {
           height: "22vh",
           width: "13vw",
           backgroundColor: "#111F55",
-          borderRadius:"20px",
+          borderRadius: "20px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -87,11 +109,16 @@ function OtherData(props) {
         }}
       >
         <div className="wind">
-                  
-
+          <div>
+            {" "}
+            <Lottie
+              animationData={wind}
+              style={{ height: "11vh", width: "15vw" }}
+            />{" "}
+          </div>
         </div>
         <div className="wind">
-          {data.wind != "" ? ` wind : ${data.wind}` : ""}
+          {data.wind != "" ? <b> wind : {data.wind} m/s </b> : ""}
         </div>
       </div>
       <div
@@ -100,7 +127,7 @@ function OtherData(props) {
           height: "22vh",
           width: "13vw",
           backgroundColor: "#111F55",
-          borderRadius:"20px",
+          borderRadius: "20px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -108,12 +135,14 @@ function OtherData(props) {
           flexDirection: "column",
         }}
       >
-        <div className="Levels">image</div>
-        <div className="seaLevel">
-          {data.longitude != "" ? `  longitude : ${data.longitude}` : ""}
+        <div className="Levels"> 
+        <div> <Lottie animationData={latlon} style={{height:"11vh",width:"15vw"}}/> </div>
         </div>
-        <div className="grndLevel">
-          {data.latitude != "" ? ` latitude : ${data.latitude}` : ""}
+        <div className="lat">
+          {data.latitude != "" ? <b> latitude : {data.latitude}d</b> : ""}
+        </div>
+        <div className="lon">
+          {data.longitude != "" ? <b> longitude : {data.longitude}d</b> : ""}
         </div>
       </div>
     </>
