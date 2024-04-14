@@ -9,16 +9,16 @@ function Temperature(props) {
         className="Temperature"
         style={{
           width: "20vw",
-          height: "15vh",
+          height: "11vh",
           position: "absolute",
-          left: "12vw",
-          top: "37vh",
-        //   backgroundColor: "black",
+          left: "38vw",
+          top: "36vh",
+          // backgroundColor: "black",
           color: "white",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          fontSize: "50px",
+          fontSize: "55px",
         }}
       >
         {" "}
@@ -35,9 +35,9 @@ function Temperature(props) {
           width: "20vw",
           height: "5vh",
           position: "absolute",
-          left: "12vw",
-          top: "50vh",
-        //   backgroundColor: "blue",
+          left: "38vw",
+          top: "46vh",
+          // backgroundColor: "blue",
           color: "white",
           display: "flex",
           justifyContent: "center",

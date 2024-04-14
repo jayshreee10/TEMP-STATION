@@ -2,12 +2,6 @@ import React from "react";
 import { useState } from "react";
 // import date from from "./service/time" ;
 function Location(props) {
-  // function getDate() {
-  //   return new Date().getDate;
-  // }
-  // const [date, setDate] = useState(getDate());
-  // setDate(getDate())
-
   function getTime() {
     return new Date().toUTCString();
   }
@@ -29,6 +23,7 @@ function Location(props) {
         top: "0",
         display: "flex",
         flexDirection: "column",
+        color:"white"
         // justifyContent: "center",
         // alignItems: "center",
       }}
@@ -39,7 +34,7 @@ function Location(props) {
           width: "25vw",
           height: "10vh",
           // backgroundColor: "blue",
-          fontSize: "46px",
+          fontSize: "50px",
           fontWeight: "400",
           display: "flex",
           // alignItems: "center",
@@ -51,17 +46,16 @@ function Location(props) {
       <div
         className="locationData"
         style={{
-          width: "10vw",
+          width: "13vw",
           height: "7vh",
           // backgroundColor: "red",
           display: "flex",
-          // textAlign :"center",
+          textAlign :"left",
           
           // justifyContent: "space-evenly",
         }}
       >
-       
-       
+
         {data.location != "" ? (
           <div className="time">
             <b>{time}</b>

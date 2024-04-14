@@ -91,7 +91,7 @@ function OtherData(props) {
           style={{ height: "18vh", width: "10vw",marginTop:"-35px" }}
         /> </div>
         <div className="humidity" style={{marginTop:"-16px"}}>
-          {data.humidity != "" ? <b>humidity : {data.humidity}%</b>  : ""}
+          {data.humidity != "" ? <b>Humidity : {data.humidity}%</b>  : ""}
         </div>
       </div>
       <div
@@ -118,7 +118,7 @@ function OtherData(props) {
           </div>
         </div>
         <div className="wind">
-          {data.wind != "" ? <b> wind : {data.wind} m/s </b> : ""}
+          {data.wind != "" ? <b> Wind : {data.wind} m/s </b> : ""}
         </div>
       </div>
       <div
@@ -139,10 +139,10 @@ function OtherData(props) {
         <div> <Lottie animationData={latlon} style={{height:"11vh",width:"15vw"}}/> </div>
         </div>
         <div className="lat">
-          {data.latitude != "" ? <b> latitude : {data.latitude}d</b> : ""}
+          {data.latitude != "" ? <b> Latitude : {data.latitude}d</b> : ""}
         </div>
         <div className="lon">
-          {data.longitude != "" ? <b> longitude : {data.longitude}d</b> : ""}
+          {data.longitude != "" ? <b> Longitude : {data.longitude}d</b> : ""}
         </div>
       </div>
     </>

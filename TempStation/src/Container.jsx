@@ -3,7 +3,7 @@ import Location from "./components/Location";
 import Temperature from "./components/Temperature";
 import MaxMinTemp from "./components/MaxMinTemp";
 import OtherData from "./components/OtherData";
-import CallLottie from "./components/Lottie" ;
+import CallLottie from "./components/Lottie";
 
 function TempStation() {
   let defaultData = {
@@ -18,21 +18,20 @@ function TempStation() {
     maxTemp: "",
     sunrise: "",
     sunset: "",
-    longitude :  "",
+    longitude: "",
     latitude: "",
   };
   const [data, setData] = useState(defaultData);
   const [error, setError] = useState(false);
-  const [inputLocation , setInputLocation] = useState("");
+  const [inputLocation, setInputLocation] = useState("");
 
   async function callApi() {
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${inputLocation}&appid=7d3a506953bf739eb497cd7257dfe861&units=metric`
     );
-    if (response.status == 200 ) {
-    
+    if (response.status == 200) {
       const apiData = await response.json();
-      console.log(apiData)
+      console.log(apiData);
       let newData = {
         temperature: apiData.main.temp,
         location: apiData.name,
@@ -45,17 +44,16 @@ function TempStation() {
         sunrise: apiData.sys.sunrise,
         sunset: apiData.sys.sunset,
         weatherCondition: apiData.weather[0].description,
-        lottie : apiData.weather[0].main,
-        longitude : apiData.coord.lon,
-        latitude : apiData.coord.lat ,
+        lottie: apiData.weather[0].main,
+        longitude: apiData.coord.lon,
+        latitude: apiData.coord.lat,
       };
       setData(newData);
-      setError(false); 
-    } 
-    else {
+      setError(false);
+    } else {
       setError(true);
     }
-    }
+  }
 
   return (
     <div
@@ -97,9 +95,6 @@ function TempStation() {
             justifyContent: "space-evenly",
           }}
         >
-          {/* card 1 = location + day + date + time */}
-          {error ? <div>error</div> : <Location data={data} />}
-
           {/* card 2 = search bar */}
           <div
             className="Card2"
@@ -111,31 +106,32 @@ function TempStation() {
               alignItems: "center",
               justifyContent: "center",
               position: "absolute",
-              right: "0vw",
-              top: "0",
+              // right: "0vw",
+              top: "3vh",
             }}
           >
+            {" "}
+            <div />
             <input
               type="search"
               name="SearchBar"
               id="SearchBar"
               placeholder="Enter City Name"
               style={{
-                width: "20vw",
+                width: "30vw",
                 height: "4.8vh",
                 backgroundColor: "white",
                 opacity: "60%",
                 paddingLeft: "12px",
-                paddingRight :"5px",
+                paddingRight: "5px",
                 border: "none",
                 color: "black",
                 borderRadius: "4px",
               }}
               onChange={(e) => {
-                setInputLocation( e.target.value) ;
+                setInputLocation(e.target.value);
               }}
             />
-
             <button
               type="button"
               value="Search"
@@ -164,11 +160,27 @@ function TempStation() {
           className="SecondDataContainer"
           style={{
             display: "flex",
-            height: "50vh",
+            height: "40vh",
             width: "85vw",
             // backgroundColor: "yellow",
           }}
         >
+          {/* first data */}
+          <div
+            style={{
+              width: "30vw",
+              height: "22vh",
+              position: "absolute",
+              left: "10vw",
+              top: "35vh",
+              // backgroundColor: "black",
+            }}
+          >
+            {/* card 1 = location + day + date + time */}
+            {error ? <div>error</div> : <Location data={data} />}
+          </div>
+
+          {/* card 3 */}
           <Temperature data={data} />
 
           {/* card 4 = weather gif */}
@@ -188,7 +200,6 @@ function TempStation() {
             }}
           >
             <CallLottie data={data} />
-
           </div>
 
           {/* card 5 = extra data (feels like + min temp + max temp  )   */}
