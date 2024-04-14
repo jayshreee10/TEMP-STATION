@@ -7,7 +7,7 @@ import mist from "../assets/lottie/mist.json";
 
 function CallLottie(props) {
    const newData = props.data ;
-   console.log (newData) ;
+  //  console.log (newData) ;
   if (newData.lottie == "Clear") {
     return <Lottie animationData={clear} style={{ height: "23vh", width: "20vw" }} />;
   } else if (newData.lottie == "Clouds") {
@@ -29,6 +29,8 @@ function CallLottie(props) {
   else {
     return  <Lottie animationData={clear} style={{ height: "23vh", width: "20vw" }} />
   }
+
+
 }
 
 

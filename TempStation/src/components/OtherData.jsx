@@ -10,6 +10,7 @@ function OtherData(props) {
   const data = props.data;
   return (
     <>
+    
       <div
         className="Card6"
         style={{
@@ -35,12 +36,18 @@ function OtherData(props) {
           />
         </div>
         <div className="sunrise">
-          {data.sunrise != ""
-            ? <b>Sunrise : {epochConverter(data.sunrise)}</b>
-            : ""}
+          {data.sunrise != "" ? (
+            <b>Sunrise : {epochConverter(data.sunrise)}</b>
+          ) : (
+            ""
+          )}
         </div>
         <div className="sunset">
-          {data.sunset != "" ? <b>Sunset : {epochConverter(data.sunset)}</b> : ""}
+          {data.sunset != "" ? (
+            <b>Sunset : {epochConverter(data.sunset)}</b>
+          ) : (
+            ""
+          )}
         </div>
       </div>
 
@@ -66,7 +73,7 @@ function OtherData(props) {
 
           {/* <img src="src/assets/pressure.gif" alt="" srcset="" height={"70vh"} width={"100vw"} /> */}
         </div>
-        <div className="pressure" style={{marginTop:"10px"}}>
+        <div className="pressure" style={{ marginTop: "10px" }}>
           {data.pressure != "" ? <b>Pressure : {data.pressure}hPa</b> : ""}
         </div>
       </div>
@@ -82,16 +89,16 @@ function OtherData(props) {
           justifyContent: "center",
           fontSize: "15px",
           flexDirection: "column",
-          
         }}
       >
-        
-        <div className="humidity" > <Lottie
-          animationData={humidity}
-          style={{ height: "18vh", width: "10vw",marginTop:"-35px" }}
-        /> </div>
-        <div className="humidity" style={{marginTop:"-16px"}}>
-          {data.humidity != "" ? <b>Humidity : {data.humidity}%</b>  : ""}
+        <div className="humidity">
+          <Lottie
+            animationData={humidity}
+            style={{ height: "18vh", width: "10vw", marginTop: "-35px" }}
+          />
+        </div>
+        <div className="humidity" style={{ marginTop: "-16px" }}>
+          {data.humidity != "" ? <b>Humidity : {data.humidity}%</b> : ""}
         </div>
       </div>
       <div
@@ -135,8 +142,14 @@ function OtherData(props) {
           flexDirection: "column",
         }}
       >
-        <div className="Levels"> 
-        <div> <Lottie animationData={latlon} style={{height:"11vh",width:"15vw"}}/> </div>
+        <div className="Levels">
+          <div>
+            {" "}
+            <Lottie
+              animationData={latlon}
+              style={{ height: "11vh", width: "15vw" }}
+            />{" "}
+          </div>
         </div>
         <div className="lat">
           {data.latitude != "" ? <b> Latitude : {data.latitude}d</b> : ""}

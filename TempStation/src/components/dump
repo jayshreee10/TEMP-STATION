@@ -1,0 +1,27 @@
+return <>
+
+<SearchBarAndButton>
+
+{
+	
+	appState == -1
+
+	? <Error/> :
+
+    appState == 0
+
+    ? <Initial/>
+
+    appState == 1
+
+    ? <Loading/> :
+
+    appState == 2 
+
+    ? <Succes/> :
+
+    ? <Initial/>
+  
+}
+
+</>

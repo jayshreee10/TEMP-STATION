@@ -22,10 +22,17 @@ function TempStation() {
     latitude: "",
   };
   const [data, setData] = useState(defaultData);
-  const [error, setError] = useState(false);
   const [inputLocation, setInputLocation] = useState("");
+  /* 
+  appstate == -1: Error 
+  appstate == 0: Initial
+  appstate == 1: Loading 
+  appstate == 2: Sucess 
 
+  */
+ const [appState,setAppState] = useState (0)
   async function callApi() {
+    setAppState(1)
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${inputLocation}&appid=7d3a506953bf739eb497cd7257dfe861&units=metric`
     );
@@ -49,9 +56,10 @@ function TempStation() {
         latitude: apiData.coord.lat,
       };
       setData(newData);
-      setError(false);
+      setAppState(2)
+      
     } else {
-      setError(true);
+      setAppState (-1)
     }
   }
 
@@ -177,7 +185,7 @@ function TempStation() {
             }}
           >
             {/* card 1 = location + day + date + time */}
-            {error ? <div>error</div> : <Location data={data} />}
+             <Location data={data} />
           </div>
 
           {/* card 3 */}
