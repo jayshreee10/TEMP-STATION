@@ -70,6 +70,9 @@ function sucess(props) {
           justifyContent: "space-around",
           height: "25vh",
           width: "75vw",
+          position:"absolute",
+          top:"62vh",
+          left :"12.5vw"
           // backgroundColor: "red",
         }}
       >

@@ -6,6 +6,7 @@ import Pressure from "../assets/lottie/pressure.json";
 import wind from "../assets/lottie/New Lottie/Wind.json";
 import latlon from "../assets/lottie/New Lottie/altitude.json";
 
+
 function OtherData(props) {
   const data = props.data;
   return (
