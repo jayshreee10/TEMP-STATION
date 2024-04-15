@@ -3,8 +3,8 @@ import epochConverter from "../service/time";
 import Lottie from "lottie-react";
 import humidity from "../assets/lottie/humidity.json";
 import Pressure from "../assets/lottie/pressure.json";
-import wind from "../assets/lottie/wind.json";
-import latlon from "../assets/lottie/latlon.json";
+import wind from "../assets/lottie/New Lottie/Wind.json";
+import latlon from "../assets/lottie/New Lottie/altitude.json";
 
 function OtherData(props) {
   const data = props.data;
@@ -68,7 +68,7 @@ function OtherData(props) {
         <div className="pressure">
           <Lottie
             animationData={Pressure}
-            style={{ height: "10vh", width: "8vw" }}
+            style={{ height: "11vh", width: "8vw" }}
           />
 
           {/* <img src="src/assets/pressure.gif" alt="" srcset="" height={"70vh"} width={"100vw"} /> */}
@@ -94,10 +94,10 @@ function OtherData(props) {
         <div className="humidity">
           <Lottie
             animationData={humidity}
-            style={{ height: "18vh", width: "10vw", marginTop: "-35px" }}
+            style={{ height: "18vh", width: "10vw", marginTop: "-30px" }}
           />
         </div>
-        <div className="humidity" style={{ marginTop: "-16px" }}>
+        <div className="humidity" style={{ marginTop: "-8px" }}>
           {data.humidity != "" ? <b>Humidity : {data.humidity}%</b> : ""}
         </div>
       </div>
@@ -120,7 +120,7 @@ function OtherData(props) {
             {" "}
             <Lottie
               animationData={wind}
-              style={{ height: "11vh", width: "15vw" }}
+              style={{ height: "17vh", width: "16vw",marginTop:"-4vh"}}
             />{" "}
           </div>
         </div>
@@ -147,7 +147,7 @@ function OtherData(props) {
             {" "}
             <Lottie
               animationData={latlon}
-              style={{ height: "11vh", width: "15vw" }}
+              style={{ height: "15.5vh", width: "10vw",marginTop:"-2vh"}}
             />{" "}
           </div>
         </div>
