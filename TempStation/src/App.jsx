@@ -1,13 +1,15 @@
 // import TempStation from "./Container";
 import './App.css'
-// import Error from "./components/error";
-import Loading from "./components/loading";
+import Error from "./components/error";
+// import Loading from "./components/loading";
+// import InitialLottie from "./components/initial";
 function App() {
 
   return (
     // <TempStation/>
-    // <Error/>
-    <Loading/>
+    <Error/>
+    // <Loading/>
+    // <InitialLottie/>
   )
    
 

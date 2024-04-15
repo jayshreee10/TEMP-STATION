@@ -1,6 +1,6 @@
 import React from 'react'
 import Lottie from 'lottie-react'
-import initialLottie from "../assets/lottie/initial.json"
+import initialLottie from "../assets/lottie/New Lottie/Hello sunshine.json"
 
 function initial() {
   return (
