@@ -4,6 +4,8 @@ import Temperature from "./components/Temperature";
 import MaxMinTemp from "./components/MaxMinTemp";
 import OtherData from "./components/OtherData";
 import CallLottie from "./components/Lottie";
+import LoadingFunc from "./components/loading";
+
 
 function TempStation() {
   let defaultData = {
@@ -36,6 +38,7 @@ function TempStation() {
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${inputLocation}&appid=7d3a506953bf739eb497cd7257dfe861&units=metric`
     );
+    SetLoading()
     if (response.status == 200) {
       const apiData = await response.json();
       console.log(apiData);
@@ -162,7 +165,7 @@ function TempStation() {
             </button>
           </div>
         </div>
-
+       
         {/* data container box two  : card 3 = temp + celcius + weather condition (cloudy/sunny) ; card 4 = weather gif ; card 5 = extra data (feels like + min temp + max temp  )  */}
         <div
           className="SecondDataContainer"
