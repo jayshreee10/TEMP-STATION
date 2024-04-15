@@ -1,11 +1,8 @@
 import { useState } from "react";
-import Location from "./components/Location";
-import Temperature from "./components/Temperature";
-import MaxMinTemp from "./components/MaxMinTemp";
-import OtherData from "./components/OtherData";
-import CallLottie from "./components/Lottie";
-import LoadingFunc from "./components/loading";
-
+import Sucess from "./components/sucess";
+import Initial from "./components/initial";
+import Loading from "./components/loading";
+import Error from "./components/error";
 
 function TempStation() {
   let defaultData = {
@@ -32,13 +29,18 @@ function TempStation() {
   appstate == 2: Sucess 
 
   */
- const [appState,setAppState] = useState (0)
+  const [appState, setAppState] = useState(0);
+
+  const delay = (delayInms) => {
+    return new Promise(resolve => setTimeout(resolve, delayInms));
+  };
   async function callApi() {
-    setAppState(1)
+    setAppState(1);
+    await delay(3000) ;
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${inputLocation}&appid=7d3a506953bf739eb497cd7257dfe861&units=metric`
     );
-    SetLoading()
+
     if (response.status == 200) {
       const apiData = await response.json();
       console.log(apiData);
@@ -59,10 +61,9 @@ function TempStation() {
         latitude: apiData.coord.lat,
       };
       setData(newData);
-      setAppState(2)
-      
+      setAppState(2);
     } else {
-      setAppState (-1)
+      setAppState(-1);
     }
   }
 
@@ -106,9 +107,9 @@ function TempStation() {
             justifyContent: "space-evenly",
           }}
         >
-          {/* card 2 = search bar */}
+          {/* card 0= search bar */}
           <div
-            className="Card2"
+            className="Card0"
             style={{
               width: "35vw",
               height: "10vh",
@@ -165,72 +166,18 @@ function TempStation() {
             </button>
           </div>
         </div>
-       
-        {/* data container box two  : card 3 = temp + celcius + weather condition (cloudy/sunny) ; card 4 = weather gif ; card 5 = extra data (feels like + min temp + max temp  )  */}
-        <div
-          className="SecondDataContainer"
-          style={{
-            display: "flex",
-            height: "40vh",
-            width: "85vw",
-            // backgroundColor: "yellow",
-          }}
-        >
-          {/* first data */}
-          <div
-            style={{
-              width: "30vw",
-              height: "22vh",
-              position: "absolute",
-              left: "10vw",
-              top: "35vh",
-              // backgroundColor: "black",
-            }}
-          >
-            {/* card 1 = location + day + date + time */}
-             <Location data={data} />
-          </div>
 
-          {/* card 3 */}
-          <Temperature data={data} />
-
-          {/* card 4 = weather gif */}
-          <div
-            className="Card4"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              position: "absolute",
-              right: "21vw",
-              top: "33vh",
-              height: "25vh",
-              width: "25vw",
-              // backgroundColor: "brown",
-            }}
-          >
-            <CallLottie data={data} />
-          </div>
-
-          {/* card 5 = extra data (feels like + min temp + max temp  )   */}
-          <MaxMinTemp data={data} />
-        </div>
-
-        {/* data container box three : card 6,7,8,9,10= extra data (  6: (sunrise + sunset) + 7: pressure + 8: humidity + 9: wind + 10: (sea_level + grnd_level) ) */}
-        <div
-          className="ThirdDataContainer"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-around",
-            height: "25vh",
-            width: "75vw",
-            // backgroundColor: "red",
-          }}
-        >
-          <OtherData data={data} />
-        </div>
+        {appState == 0 ? (
+          <Initial />
+        ) : appState == 1 ? (
+          <Loading />
+        ) : appState == 2 ? (
+          <Sucess data={data} />
+        ) : appState == -1 ? (
+          <Error />
+        ) : (
+          <Initial />
+        )}
       </div>
     </div>
   );
