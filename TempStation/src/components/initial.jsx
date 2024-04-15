@@ -1,14 +1,45 @@
-import React from 'react'
-import Lottie from 'lottie-react'
-import initialLottie from "../assets/lottie/New Lottie/Hello sunshine.json"
+import React from "react";
+import Lottie from "lottie-react";
+import initialLottie from "../assets/lottie/New Lottie/Hello sunshine (1).json";
+import Fonts from "../service/fonts"
 
 function initial() {
   return (
-    <div style={{display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center" , }}>
-    <Lottie animationData={initialLottie} style={{height:"50vh",width:"100vw"}}></Lottie>
-    <p style={{marginTop:"2%",marginLeft:"5%",fontWeight:"bolder",fontSize:"35px"}}> </p>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "80vh",
+        width: "80vw",
+        // backgroundColor:"black"
+      }}
+    >
+      <Lottie
+        animationData={initialLottie}
+        style={{
+          height: "60vh",
+          width: "50vw",
+          position: "absolute",
+          // backgroundColor:"brown",
+          top: "20vh",
+        }}
+      ></Lottie>
+      <p
+        style={{
+          fontWeight: "bolder",
+          fontSize: "35px",
+          position: "absolute",
+          top: "66vh",
+          
+        }}
+      >
+        {" "}
+        HEY THERE SUNSHINE !! READY TO FORECAST ?{" "}
+      </p>
     </div>
-  )
+  );
 }
 
-export default initial
+export default initial;
