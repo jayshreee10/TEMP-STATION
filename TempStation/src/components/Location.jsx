@@ -28,8 +28,8 @@ function Location(props) {
         // alignItems: "center",
       }}
     >
-      <div
-        className="loaction"
+      <div 
+        className="max-lines"
         style={{
           width: "26vw",
           height: "8vh",
@@ -37,7 +37,7 @@ function Location(props) {
           fontSize: "20px",
           fontWeight: "400",
           display: "flex",
-          // alignItems: "center",
+          alignItems: "center",
           // justifyContent: "center",
         }}
       >
@@ -48,10 +48,11 @@ function Location(props) {
             title="location"
             height={"35vh"}
             width={"35vw"}
+            style={{marginRight: "3px"}}
           />
         </div>
 
-        {data.location}
+        <p class="max-lines">  {data.location} </p>
       </div>
 
       <div

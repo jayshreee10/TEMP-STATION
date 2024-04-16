@@ -36,7 +36,7 @@ function initial() {
         }}
       >
         {" "}
-        HEY SUNSHINE !! READY TO FORECAST ??{" "}
+        Hey Sunshine !! Ready To Forecast ??{" "}
       </p>
     </div>
   );

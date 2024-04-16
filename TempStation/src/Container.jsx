@@ -3,6 +3,7 @@ import Sucess from "./components/sucess";
 import Initial from "./components/initial";
 import Loading from "./components/loading";
 import Error from "./components/error";
+import Background from "./assets/p6.jpg";
 
 function TempStation() {
   let defaultData = {
@@ -73,7 +74,10 @@ function TempStation() {
       style={{
         height: "100vh",
         width: "100vw",
-        backgroundColor: "aliceblue",
+        backgroundImage:  `url(${Background})`,
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -137,7 +141,7 @@ function TempStation() {
                 paddingLeft: "12px",
                 paddingRight: "5px",
                 border: "none",
-                color: "white",
+                color: "Gray",
                 borderRadius: "4px",
               }}
               onChange={(e) => {
@@ -156,7 +160,7 @@ function TempStation() {
                 borderRadius: "6px",
                 color: "white",
                 textAlign: "center",
-                fontSize: "12px",
+                fontSize: "13px",
               }}
               onClick={() => {
                 callApi();
