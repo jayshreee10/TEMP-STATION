@@ -12,7 +12,7 @@ function MaxMinTemp(props) {
         justifyContent: "space-around",
         position: "absolute",
         right: "12.5vw",
-        top: "40vh",
+        top: "38vh",
         height: "13vh",
         width: "16vw",
         fontSize: "12px",

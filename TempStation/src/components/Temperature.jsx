@@ -19,6 +19,7 @@ function Temperature(props) {
           // justifyContent: "center",
           alignItems: "center",
           fontSize: "45px",
+          fontWeight: "600",
         }}
       >
         {" "}
@@ -35,17 +36,26 @@ function Temperature(props) {
           width: "17vw",
           height: "5vh",
           position: "absolute",
-          left: "43vw",
-          top: "47vh",
+          left: "40.5vw",
+          top: "45.5vh",
           // backgroundColor: "blue",
           color: "white",
           display: "flex",
           // justifyContent: "center",
-          alignItems: "center",
+          // alignItems: "center",
           fontSize: "20px",
-          fontWeight:"600"
+          fontWeight: "600",
         }}
       >
+        <div>
+          <img
+            src="src/assets/forecast_icon.png"
+            height={"40vh"}
+            width={"40vw"}
+            style={{ marginRight: "5px" }}
+            title="forecast"
+          />
+        </div>
         {data.weatherCondition}
       </div>
     </div>

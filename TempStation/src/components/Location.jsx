@@ -45,8 +45,7 @@ function Location(props) {
           {" "}
           <img
             src="src/assets/location_icon.png"
-            alt=""
-            srcset=""
+            title="location"
             height={"35vh"}
             width={"35vw"}
           />
@@ -75,6 +74,7 @@ function Location(props) {
             srcset=""
             height={"25vh"}
             width={"25vw"}
+            title="date"
             style={{ marginRight: "8px",marginLeft:"8px" }}
           />{" "}
         </div>
