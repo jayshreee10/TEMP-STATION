@@ -69,12 +69,12 @@ function OtherData(props) {
         <div className="pressure">
           <Lottie
             animationData={Pressure}
-            style={{ height: "11vh", width: "8vw" }}
+            style={{ height: "7vh", width: "7vw" }}
           />
 
           {/* <img src="src/assets/pressure.gif" alt="" srcset="" height={"70vh"} width={"100vw"} /> */}
         </div>
-        <div className="pressure" style={{ marginTop: "10px" }}>
+        <div className="pressure" style={{ marginTop: "23px" }}>
           {data.pressure != "" ? <b>Pressure : {data.pressure}hPa</b> : ""}
         </div>
       </div>
@@ -95,10 +95,10 @@ function OtherData(props) {
         <div className="humidity">
           <Lottie
             animationData={humidity}
-            style={{ height: "18vh", width: "10vw", marginTop: "-30px" }}
+            style={{ height: "14vh", width: "10vw", marginTop: "-20px" }}
           />
         </div>
-        <div className="humidity" style={{ marginTop: "-8px" }}>
+        <div className="humidity" style={{ marginTop: "-3px" }}>
           {data.humidity != "" ? <b>Humidity : {data.humidity}%</b> : ""}
         </div>
       </div>
@@ -121,7 +121,7 @@ function OtherData(props) {
             {" "}
             <Lottie
               animationData={wind}
-              style={{ height: "16vh", width: "16vw",marginTop:"-4vh"}}
+              style={{ height: "14vh", width: "16vw",marginTop:"-4vh"}}
             />{" "}
           </div>
         </div>

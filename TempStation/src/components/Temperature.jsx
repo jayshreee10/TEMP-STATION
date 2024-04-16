@@ -11,7 +11,7 @@ function Temperature(props) {
           width: "17vw",
           height: "11vh",
           position: "absolute",
-          left: "43vw",
+          left: "41vw",
           top: "35vh",
           // backgroundColor: "brown",
           color: "white",
@@ -33,10 +33,10 @@ function Temperature(props) {
       <div
         className="WeatherCondition"
         style={{
-          width: "17vw",
+          width: "15vw",
           height: "5vh",
           position: "absolute",
-          left: "40.5vw",
+          left: "39vw",
           top: "45.5vh",
           // backgroundColor: "blue",
           color: "white",
@@ -52,7 +52,7 @@ function Temperature(props) {
             src="src/assets/forecast_icon.png"
             height={"40vh"}
             width={"40vw"}
-            style={{ marginRight: "5px" }}
+            style={{ marginRight: "3px" }}
             title="forecast"
           />
         </div>
