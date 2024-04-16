@@ -47,7 +47,7 @@ function sucess(props) {
             alignItems: "center",
             justifyContent: "center",
             position: "absolute",
-            right: "21vw",
+            right: "20vw",
             top: "33vh",
             height: "25vh",
             width: "25vw",

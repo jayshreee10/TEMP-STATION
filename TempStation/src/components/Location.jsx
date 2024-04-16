@@ -3,7 +3,7 @@ import { useState } from "react";
 // import date from from "./service/time" ;
 function Location(props) {
   function getTime() {
-    return new Date().toUTCString();
+    return new Date().toDateString();
   }
   const [time, setTime] = useState(getTime());
   setInterval(() => {
@@ -15,50 +15,72 @@ function Location(props) {
     <div
       className="Card1"
       style={{
-        width: "20vw",
-        height: "25vh",
+        width: "28vw",
+        height: "20vh",
         // backgroundColor: "black",
         position: "absolute",
         left: "5vw",
-        top: "0",
+        // top: "vh",
         display: "flex",
         flexDirection: "column",
-        color:"white"
-        // justifyContent: "center",
+        color: "white",
+        justifyContent: "center",
         // alignItems: "center",
       }}
     >
       <div
         className="loaction"
         style={{
-          width: "25vw",
-          height: "10vh",
+          width: "28vw",
+          height: "8vh",
           // backgroundColor: "blue",
-          fontSize: "50px",
-          fontWeight: "400",
+          fontSize: "20px",
+          fontWeight: "500",
           display: "flex",
           // alignItems: "center",
           // justifyContent: "center",
         }}
       >
+        <div>
+          {" "}
+          <img
+            src="src/assets/location_icon.png"
+            alt=""
+            srcset=""
+            height={"35vh"}
+            width={"35vw"}
+          />
+        </div>
+
         {data.location}
       </div>
+
       <div
         className="locationData"
         style={{
-          width: "13vw",
-          height: "7vh",
+          width: "26vw",
+          height: "4vh",
           // backgroundColor: "red",
           display: "flex",
-          textAlign :"left",
-          
-          // justifyContent: "space-evenly",
+          // marginTop:"3vh",
+          fontSize: "16px",
+          // justifyContent: "center",
         }}
       >
-
+        <div>
+          {" "}
+          <img
+            src="src/assets/calendar_icon.png"
+            alt=""
+            srcset=""
+            height={"25vh"}
+            width={"25vw"}
+            style={{ marginRight: "8px",marginLeft:"8px" }}
+          />{" "}
+        </div>
         {data.location != "" ? (
           <div className="time">
-            <b>{time}</b>
+            <b> {time}</b>
           </div>
         ) : (
           ""

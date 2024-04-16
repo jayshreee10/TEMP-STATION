@@ -8,17 +8,17 @@ function Temperature(props) {
       <div
         className="Temperature"
         style={{
-          width: "20vw",
+          width: "17vw",
           height: "11vh",
           position: "absolute",
-          left: "38vw",
-          top: "36vh",
-          // backgroundColor: "black",
+          left: "43vw",
+          top: "35vh",
+          // backgroundColor: "brown",
           color: "white",
           display: "flex",
-          justifyContent: "center",
+          // justifyContent: "center",
           alignItems: "center",
-          fontSize: "55px",
+          fontSize: "45px",
         }}
       >
         {" "}
@@ -32,20 +32,21 @@ function Temperature(props) {
       <div
         className="WeatherCondition"
         style={{
-          width: "20vw",
+          width: "17vw",
           height: "5vh",
           position: "absolute",
-          left: "38vw",
-          top: "46vh",
+          left: "43vw",
+          top: "47vh",
           // backgroundColor: "blue",
           color: "white",
           display: "flex",
-          justifyContent: "center",
+          // justifyContent: "center",
           alignItems: "center",
           fontSize: "20px",
+          fontWeight:"600"
         }}
       >
-       <b>{data.weatherCondition}</b> 
+        {data.weatherCondition}
       </div>
     </div>
   );

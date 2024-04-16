@@ -121,7 +121,7 @@ function OtherData(props) {
             {" "}
             <Lottie
               animationData={wind}
-              style={{ height: "17vh", width: "16vw",marginTop:"-4vh"}}
+              style={{ height: "16vh", width: "16vw",marginTop:"-4vh"}}
             />{" "}
           </div>
         </div>
