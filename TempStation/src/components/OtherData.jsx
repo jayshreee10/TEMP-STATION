@@ -4,7 +4,7 @@ import Lottie from "lottie-react";
 import humidity from "../assets/lottie/humidity.json";
 import Pressure from "../assets/lottie/pressure.json";
 import wind from "../assets/lottie/New Lottie/Wind.json";
-import latlon from "../assets/lottie/New Lottie/altitude.json";
+import latlon from "../assets/lottie/New Lottie/latlon.json";
 
 
 function OtherData(props) {
@@ -148,12 +148,12 @@ function OtherData(props) {
             {" "}
             <Lottie
               animationData={latlon}
-              style={{ height: "15.5vh", width: "10vw",marginTop:"-2vh"}}
+              style={{ height: "15.5vh", width: "10vw",marginTop:"0vh"}}
             />{" "}
           </div>
         </div>
         <div className="lat">
-          {data.latitude != "" ? <div> Latitude : {data.latitude}d</div> : ""}
+          {data.latitude != "" ? <div style={{marginTop:"-2vh"}}> Latitude : {data.latitude}d</div> : ""}
         </div>
         <div className="lon">
           {data.longitude != "" ? <div> Longitude : {data.longitude}d</div> : ""}
