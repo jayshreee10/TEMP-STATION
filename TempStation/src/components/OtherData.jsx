@@ -38,14 +38,14 @@ function OtherData(props) {
         </div>
         <div className="sunrise">
           {data.sunrise != "" ? (
-            <b>Sunrise : {epochConverter(data.sunrise)}</b>
+            <div>Sunrise : {epochConverter(data.sunrise)}</div>
           ) : (
             ""
           )}
         </div>
         <div className="sunset">
           {data.sunset != "" ? (
-            <b>Sunset : {epochConverter(data.sunset)}</b>
+            <div>Sunset : {epochConverter(data.sunset)}</div>
           ) : (
             ""
           )}
@@ -75,7 +75,7 @@ function OtherData(props) {
           {/* <img src="src/assets/pressure.gif" alt="" srcset="" height={"70vh"} width={"100vw"} /> */}
         </div>
         <div className="pressure" style={{ marginTop: "23px" }}>
-          {data.pressure != "" ? <b>Pressure : {data.pressure}hPa</b> : ""}
+          {data.pressure != "" ? <div>Pressure : {data.pressure}hPa</div> : ""}
         </div>
       </div>
       <div
@@ -99,7 +99,7 @@ function OtherData(props) {
           />
         </div>
         <div className="humidity" style={{ marginTop: "-3px" }}>
-          {data.humidity != "" ? <b>Humidity : {data.humidity}%</b> : ""}
+          {data.humidity != "" ? <div>Humidity : {data.humidity}%</div> : ""}
         </div>
       </div>
       <div
@@ -126,7 +126,7 @@ function OtherData(props) {
           </div>
         </div>
         <div className="wind">
-          {data.wind != "" ? <b> Wind : {data.wind} m/s </b> : ""}
+          {data.wind != "" ? <div> Wind : {data.wind} m/s </div> : ""}
         </div>
       </div>
       <div
@@ -153,10 +153,10 @@ function OtherData(props) {
           </div>
         </div>
         <div className="lat">
-          {data.latitude != "" ? <b> Latitude : {data.latitude}d</b> : ""}
+          {data.latitude != "" ? <div> Latitude : {data.latitude}d</div> : ""}
         </div>
         <div className="lon">
-          {data.longitude != "" ? <b> Longitude : {data.longitude}d</b> : ""}
+          {data.longitude != "" ? <div> Longitude : {data.longitude}d</div> : ""}
         </div>
       </div>
     </>

@@ -19,7 +19,7 @@ function Temperature(props) {
           // justifyContent: "center",
           alignItems: "center",
           fontSize: "45px",
-          fontWeight: "600",
+          fontWeight: "400",
         }}
       >
         {" "}
@@ -44,7 +44,7 @@ function Temperature(props) {
           // justifyContent: "center",
           // alignItems: "center",
           fontSize: "20px",
-          fontWeight: "600",
+          // fontWeight: "600",
         }}
       >
         <div>

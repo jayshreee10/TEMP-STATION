@@ -11,12 +11,12 @@ function MaxMinTemp(props) {
         alignItems: "center",
         justifyContent: "space-around",
         position: "absolute",
-        right: "12.5vw",
+        right: "12vw",
         top: "38vh",
         height: "13vh",
         width: "16vw",
-        fontSize: "12px",
-        fontWeight: "bold",
+        fontSize: "15px",
+        // fontWeight: "bold",
         // backgroundColor: "red",
       }}
     >
@@ -30,14 +30,15 @@ function MaxMinTemp(props) {
                 width={"17px"}
                 style={{
                   display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
+                  marginTop:"3px"
+                  // alignItems: "center",
+                  // justifyContent: "center",
                 }}
               />
             </div>
             <div
               style={{
-                width: "8vw",
+                width: "12vw",
                 // backgroundColor: "black",
                 marginLeft: "5px",
               }}
@@ -61,14 +62,15 @@ function MaxMinTemp(props) {
                 width={"20px"}
                 style={{
                   display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
+                  marginTop:"3px"
+                  // alignItems: "center",
+                  // justifyContent: "center",
                 }}
               />
             </div>
             <div
               style={{
-                width: "8vw",
+                width: "12vw",
                 // backgroundColor: "black",
                 marginLeft: "5px",
               }}
@@ -91,14 +93,15 @@ function MaxMinTemp(props) {
                 width={"20px"}
                 style={{
                   display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
+                  marginTop:"3px"
+                  // alignItems: "center",
+                  // justifyContent: "center",
                 }}
               />
             </div>
             <div
               style={{
-                width: "8vw",
+                width: "12vw",
                 // backgroundColor: "black",
                 marginLeft: "5px",
               }}

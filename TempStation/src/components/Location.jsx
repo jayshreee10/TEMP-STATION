@@ -15,7 +15,7 @@ function Location(props) {
     <div
       className="Card1"
       style={{
-        width: "28vw",
+        width: "26vw",
         height: "20vh",
         // backgroundColor: "black",
         position: "absolute",
@@ -31,11 +31,11 @@ function Location(props) {
       <div
         className="loaction"
         style={{
-          width: "28vw",
+          width: "26vw",
           height: "8vh",
           // backgroundColor: "blue",
           fontSize: "20px",
-          fontWeight: "500",
+          fontWeight: "400",
           display: "flex",
           // alignItems: "center",
           // justifyContent: "center",
@@ -57,7 +57,7 @@ function Location(props) {
       <div
         className="locationData"
         style={{
-          width: "26vw",
+          width: "27vw",
           height: "4vh",
           // backgroundColor: "red",
           display: "flex",
@@ -70,8 +70,6 @@ function Location(props) {
           {" "}
           <img
             src="src/assets/calendar_icon.png"
-            alt=""
-            srcset=""
             height={"25vh"}
             width={"25vw"}
             title="date"
@@ -80,7 +78,7 @@ function Location(props) {
         </div>
         {data.location != "" ? (
           <div className="time">
-            <b> {time}</b>
+            {time}
           </div>
         ) : (
           ""

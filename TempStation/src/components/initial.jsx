@@ -28,7 +28,7 @@ function initial() {
       ></Lottie>
       <p
         style={{
-          fontWeight: "bolder",
+          // fontWeight: "bolder",
           fontSize: "35px",
           position: "absolute",
           top: "66vh",
@@ -36,7 +36,7 @@ function initial() {
         }}
       >
         {" "}
-        HEY SUNSHINE !! READY TO FORECAST ?{" "}
+        HEY SUNSHINE !! READY TO FORECAST ??{" "}
       </p>
     </div>
   );

@@ -36,7 +36,7 @@ function TempStation() {
   };
   async function callApi() {
     setAppState(1);
-    await delay(3000) ;
+    await delay(2860) ;
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${inputLocation}&appid=7d3a506953bf739eb497cd7257dfe861&units=metric`
     );
@@ -137,7 +137,7 @@ function TempStation() {
                 paddingLeft: "12px",
                 paddingRight: "5px",
                 border: "none",
-                color: "black",
+                color: "white",
                 borderRadius: "4px",
               }}
               onChange={(e) => {
