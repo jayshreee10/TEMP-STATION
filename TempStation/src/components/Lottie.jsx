@@ -33,6 +33,4 @@ function CallLottie(props) {
 
 }
 
-
-
 export default CallLottie;
