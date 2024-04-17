@@ -1,7 +1,7 @@
 import React from "react";
 import Lottie from "lottie-react";
 import initialLottie from "../assets/lottie/New Lottie/Hello sunshine (1).json";
-import Fonts from "../service/fonts"
+
 
 function initial() {
   return (
@@ -11,7 +11,7 @@ function initial() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        height: "80vh",
+        height: "55vh",
         width: "80vw",
         // backgroundColor:"black"
       }}
