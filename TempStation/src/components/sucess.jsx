@@ -6,7 +6,7 @@ import OtherData from "./OtherData";
 import CallLottie from "./Lottie";
 
 function sucess(props) {
-  const data = props.data
+  const data = props.data;
   return (
     <div>
       {/*  all the datacontainers */}
@@ -70,9 +70,9 @@ function sucess(props) {
           justifyContent: "space-around",
           height: "25vh",
           width: "75vw",
-          position:"absolute",
-          top:"62vh",
-          left :"12.5vw"
+          position: "absolute",
+          top: "62vh",
+          left: "12.5vw",
           // backgroundColor: "red",
         }}
       >
