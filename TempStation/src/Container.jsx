@@ -33,11 +33,11 @@ function TempStation() {
   const [appState, setAppState] = useState(0);
 
   const delay = (delayInms) => {
-    return new Promise(resolve => setTimeout(resolve, delayInms));
+    return new Promise((resolve) => setTimeout(resolve, delayInms));
   };
   async function callApi() {
     setAppState(1);
-    await delay(2860) ;
+    await delay(2860);
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${inputLocation}&appid=7d3a506953bf739eb497cd7257dfe861&units=metric`
     );
@@ -74,12 +74,13 @@ function TempStation() {
       style={{
         height: "100vh",
         width: "100vw",
-        backgroundImage:  `url(${Background})`,
+        backgroundImage: `url(${Background})`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         display: "flex",
         alignItems: "center",
+        flexDirection: "column",
         justifyContent: "center",
       }}
     >
@@ -169,6 +170,21 @@ function TempStation() {
               Search
             </button>
           </div>
+          <div
+            style={{ position: "absolute", top: "5.5vh", right: "16vw" }}
+            title="Github"
+          >
+            <a
+              style={{ color: "white" }}
+              href="https://github.com/jayshreee10/TEMP-STATION"
+              target="_blank"
+            >
+              <img
+                src="src/assets/github.png"
+                style={{ height: "5vh", width: "3vw" }}
+              />
+            </a>
+          </div>
         </div>
 
         {appState == 0 ? (
@@ -182,6 +198,16 @@ function TempStation() {
         ) : (
           <Initial />
         )}
+      </div>
+      <div
+        style={{
+          position: "absolute",
+          bottom: "1.5vh",
+          left: "46vw",
+          letterSpacing: "2px",
+        }}
+      >
+        DEVELOPED WITH 💙{" "}
       </div>
     </div>
   );
