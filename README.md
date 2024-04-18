@@ -24,3 +24,4 @@ https://github.com/jayshreee10/TEMP-STATION/assets/155508849/0eb41fad-3777-46c0-
 ## Status Of TempStation
 - For now, Tempstation is exclusively available for desktop viewing; it hasn't been optimized for mobile devices.
 - However, plans are underway to make it mobile-responsive in the near future.
+- The format for sunrise and sunset times adheres to IST (Indian Standard Time).
