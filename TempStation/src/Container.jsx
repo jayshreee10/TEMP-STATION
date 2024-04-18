@@ -173,9 +173,7 @@ function TempStation() {
           <div
             style={{ position: "absolute", top: "5.5vh", right: "16vw" }}
             title="Github"
-          >
-           
-          </div>
+          ></div>
         </div>
 
         {appState == 0 ? (
@@ -196,21 +194,28 @@ function TempStation() {
           bottom: "1.5vh",
           left: "46vw",
           letterSpacing: "2px",
-          fontWeight:"bold"
+          fontWeight: "bold",
         }}
       >
-         <a
-              style={{ color: "white" }}
-              href="https://github.com/jayshreee10/TEMP-STATION"
-              target="_blank"
-            >
-              <img className="git_icon"
-                src="src/assets/github.png"
-                style={{ height: "5vh", width: "3vw",position:"absolute",  bottom: "0vh",
-                right: "12vw"}} title="Click Me"
-              />
-            </a>
         DEVELOPED WITH 💙{" "}
+        <a
+          style={{ color: "white" }}
+          href="https://github.com/jayshreee10/TEMP-STATION"
+          target="_blank"
+        >
+          <img
+            className="git_icon"
+            src="src/assets/Githubb.png"
+            style={{
+              height: "6vh",
+              width: "3vw",
+              position: "absolute",
+              bottom: "-1vh",
+              left: "47vw",
+            }}
+            title="Click Me"
+          />
+        </a>
       </div>
     </div>
   );
