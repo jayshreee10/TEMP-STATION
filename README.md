@@ -9,6 +9,7 @@
 - Postman
 - API , JSON
 - Lottie Animation
+- Firebase hosting
 
 ## Desktop View
 
