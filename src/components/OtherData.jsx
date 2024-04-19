@@ -5,7 +5,7 @@ import humidity from "../assets/lottie/humidity.json";
 import Pressure from "../assets/lottie/pressure.json";
 import wind from "../assets/lottie/New Lottie/Wind.json";
 import latlon from "../assets/lottie/New Lottie/latlon.json";
-
+import sunShine from "../assets/sunset-sun.gif"
 
 function OtherData(props) {
   const data = props.data;
@@ -29,9 +29,7 @@ function OtherData(props) {
         {/* Card 6: (sunrise + sunset) */}
         <div className="SunShine">
           <img
-            src="src/assets/sunset-sun.gif"
-            alt=""
-            srcset=""
+            src={sunShine}
             height={"85vh"}
             width={"85vw"}
           />

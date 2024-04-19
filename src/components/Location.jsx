@@ -1,5 +1,8 @@
 import React from "react";
 import { useState } from "react";
+import locatIonicon from "../assets/location_icon.png"
+import calander from "../assets/calendar_icon.png"
+
 // import date from from "./service/time" ;
 function Location(props) {
   function getTime() {
@@ -44,7 +47,7 @@ function Location(props) {
         <div>
           {" "}
           <img
-            src="src/assets/location_icon.png"
+            src= {locatIonicon}
             title="location"
             height={"35vh"}
             width={"35vw"}
@@ -70,7 +73,7 @@ function Location(props) {
         <div>
           {" "}
           <img
-            src="src/assets/calendar_icon.png"
+            src={calander}
             height={"25vh"}
             width={"25vw"}
             title="date"

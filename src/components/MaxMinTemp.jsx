@@ -1,5 +1,7 @@
 import React from "react";
-
+import minTemp from "../assets/thermometer-loss_.png"
+import feelsLike from "../assets/thermometer_.png"
+import maxTemp from "../assets/thermometer-gain-rounded_.png"
 function MaxMinTemp(props) {
   const data = props.data;
   return (
@@ -25,7 +27,7 @@ function MaxMinTemp(props) {
           <div style={{ display: "flex", justifyContent: "space-around" }}>
             <div style={{ marginRight: "0px" }}>
               <img
-                src="src\assets\thermometer_.png"
+                src={feelsLike}
                 height={"16px"}
                 width={"17px"}
                 style={{
@@ -57,7 +59,7 @@ function MaxMinTemp(props) {
           <div style={{ display: "flex" }}>
             <div style={{ marginRight: "0px" }}>
               <img
-                src="src\assets\thermometer-loss_.png"
+                src={minTemp}
                 height={"20px"}
                 width={"20px"}
                 style={{
@@ -88,7 +90,7 @@ function MaxMinTemp(props) {
           <div style={{ display: "flex" }}>
             <div style={{ marginRight: "0px" }}>
               <img
-                src="src\assets\thermometer-gain-rounded_.png "
+                src={maxTemp}
                 height={"20px"}
                 width={"20px"}
                 style={{

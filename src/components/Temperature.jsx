@@ -1,4 +1,5 @@
 import React from "react";
+import forecast from "../assets/forecast_icon.png"
 
 function Temperature(props) {
   const data = props.data;
@@ -49,7 +50,7 @@ function Temperature(props) {
       >
         <div>
           <img
-            src="src/assets/forecast_icon.png"
+            src={forecast}
             height={"40vh"}
             width={"40vw"}
             style={{ marginRight: "3px" }}
