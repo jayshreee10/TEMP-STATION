@@ -4,6 +4,7 @@ import Initial from "./components/initial";
 import Loading from "./components/loading";
 import Error from "./components/error";
 import Background from "./assets/p6.jpg";
+import Githubb from "./assets/Githubb.png"
 
 function TempStation() {
   let defaultData = {
@@ -205,7 +206,7 @@ function TempStation() {
         >
           <img
             className="git_icon"
-            src="src\assets\Githubb.png"
+            src={Githubb}
             style={{
               height: "6vh",
               width: "3vw",
