@@ -205,7 +205,7 @@ function TempStation() {
         >
           <img
             className="git_icon"
-            src="assets\Githubb.png"
+            src="src\assets\Githubb.png"
             style={{
               height: "6vh",
               width: "3vw",
