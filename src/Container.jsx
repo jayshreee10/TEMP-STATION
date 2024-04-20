@@ -1,10 +1,12 @@
 import { useState } from "react";
+import "./App.css"
 import Sucess from "./components/sucess";
 import Initial from "./components/initial";
 import Loading from "./components/loading";
 import Error from "./components/error";
 import Background from "./assets/p6.jpg";
-import Githubb from "./assets/Githubb.png"
+import Githubb from "./assets/Githubb.png";
+import Document from "./assets/d.png";
 
 function TempStation() {
   let defaultData = {
@@ -189,6 +191,26 @@ function TempStation() {
           <Initial />
         )}
       </div>
+
+      <a
+          style={{ color: "white" }}
+          href="https://smooth-broker-027.notion.site/TEMPSTATION-ef86fa6bf46d40e086aa0324e7b43052?pvs=4"
+          target="_blank"
+        >
+          <img
+            className="doc_icon"
+            src={Document}
+            style={{
+              height: "20px",
+              width: "20px",
+              position: "absolute",
+              right: "1.5vw",
+              bottom:"2.5vh"
+            }}
+            title="Click Me"
+          />
+        </a>
+
       <div
         style={{
           position: "absolute",

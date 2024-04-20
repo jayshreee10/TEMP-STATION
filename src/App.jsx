@@ -1,8 +1,6 @@
 import './App.css'
 import TempStation from "./Container";
 
-
-
 function App() {
 
   return (
